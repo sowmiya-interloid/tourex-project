@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="tourex_app.css" />
+
+    <title>Shop Page</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-area">
+        <div class="container">
+          <div class="header-row">
+            <!-- LEFT SIDE -->
+            <div class="header-column">
+              <div class="header-content">
+                <!-- LOGO -->
+                <div class="logo">
+                  <a class="white-logo" href="/">
+                    <img
+                      src="tourex_image/logo_header.webp"
+                      alt="Logo"
+                      width="126"
+                      height="35"
+                      style="color: transparent"
+                    />
+                  </a>
+
+              
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="main-navigation">
+                  <div class="navigation-wrapper">
+                    <ul class="main-menu">
+                      <!-- HOME -->
+                      <li class="has-submenu">
+                        <a href="#">Home</a>
+
+                        <ul class="submenu">
+                          <li><a href="/">Home One (Travel)</a></li>
+                          <li><a href="/home-two">Home Two (Travel)</a></li>
+                          <li><a href="/home-three">Home Three (Travel)</a></li>
+                          <li><a href="/home-four">Home Four (Hotel)</a></li>
+                          <li><a href="/home-five">Home Five (Hotel)</a></li>
+                          <li><a href="/home-six">Home Six (Hotel)</a></li>
+                          <li>
+                            <a href="/home-seven">Home Seven (Restaurant)</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- FEATURES -->
+                      <li class="has-submenu">
+                        <a href="#">Features</a>
+
+                        <ul class="submenu">
+                          <li><a href="/hotel-grid">Hotel Grid</a></li>
+                          <li><a href="/tour-grid-1">Tour Grid One</a></li>
+                          <li><a href="/tour-grid-2">Tour Grid Two</a></li>
+                          <li><a href="/map-listing">Hotel Listing</a></li>
+                          <li><a href="/tour-details">Tour Details One</a></li>
+                          <li>
+                            <a href="/tour-details-2">Tour Details Two</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- PAGES -->
+                      <li class="has-submenu">
+                        <a class="active" href="#">Pages</a>
+
+                        <ul class="submenu">
+                          <li><a href="/about">About</a></li>
+                          <li><a href="/team">Team</a></li>
+                          <li><a href="/team-details">Team Details</a></li>
+                          <li><a class="active" href="/shop">Shop</a></li>
+                          <li><a href="/shop-details">Shop Details</a></li>
+                          <li><a href="/cart">Cart</a></li>
+                          <li><a href="/wishlist">Wishlist</a></li>
+                          <li><a href="/checkout">Checkout</a></li>
+                          <li><a href="/pricing">Pricing</a></li>
+                          <li><a href="/faq">Faq</a></li>
+                          <li><a href="/login">Log In</a></li>
+                          <li><a href="/register">Register</a></li>
+                          <li><a href="/no-found">Error</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- BLOGS -->
+                      <li class="has-submenu">
+                        <a href="#">Blogs</a>
+
+                        <ul class="submenu">
+                          <li><a href="/blog-grid">Blog Grid</a></li>
+                          <li><a href="/blog-standard">Blog Standard</a></li>
+                          <li><a href="/blog-details">Blog Details</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- CONTACT -->
+                      <li>
+                        <a href="/contact">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="header-right-column">
+              <div class="header-right">
+                <!-- Contact -->
+                <div class="header-contact">
+                  <span class="contact-icon">
+                    <svg
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.5747 15.8619L15.8138 17.6228C15.7656 17.6732 15.7236 17.7026 15.6627 17.7362C13.1757 19.0753 8.40326 16.5734 6.21009 14.2626C6.18698 14.2374 6.16809 14.2185 6.14502 14.1954C3.83427 12.0021 1.33257 7.22927 2.67157 4.7421C2.70515 4.68124 2.73453 4.64134 2.78491 4.5931L4.54573 2.83006C4.67586 2.69992 4.82067 2.64116 5.00114 2.64116H5.01583C5.20471 2.64327 5.35163 2.71044 5.47965 2.84895L7.75047 5.30044C7.98973 5.55651 7.98131 5.95109 7.73368 6.19877L6.26666 7.66589C5.85321 8.08148 5.67271 8.62926 5.75877 9.20856C5.94134 10.428 6.55419 11.574 7.63293 12.7095C7.65603 12.7326 7.67489 12.7536 7.69799 12.7746C8.83342 13.8534 9.97723 14.4663 11.1966 14.6488C11.7779 14.7349 12.3257 14.5544 12.7412 14.1388L14.2062 12.6738C14.4538 12.4261 14.8484 12.4177 15.1065 12.6549L17.5578 14.9259C17.6963 15.0539 17.7614 15.2008 17.7656 15.3897C17.7698 15.5785 17.709 15.7276 17.5747 15.8619ZM18.3428 14.0779L15.8914 11.8069C15.1779 11.1457 14.0781 11.1667 13.3897 11.8552L11.9227 13.3223C11.7695 13.4755 11.5827 13.5364 11.3687 13.5049C10.3907 13.358 9.45254 12.8459 8.49341 11.9349C8.485 11.9287 8.47872 11.9202 8.47031 11.9118C7.56155 10.9547 7.04946 10.0144 6.90257 9.03849C6.87109 8.82439 6.93195 8.6376 7.08518 8.48229L8.5522 7.01728C9.2406 6.32883 9.2616 5.22902 8.59837 4.51331L6.32966 2.06182C5.98758 1.69451 5.54055 1.49304 5.03893 1.48462C4.53735 1.47624 4.08401 1.65672 3.72725 2.01354L1.96638 3.77452C1.83836 3.90256 1.73971 4.0348 1.65368 4.19431C1.24444 4.95199 1.08073 5.8776 1.16679 6.93962C1.24023 7.85682 1.49628 8.86008 1.92863 9.91793C2.70726 11.8279 3.9854 13.742 5.34746 15.035C5.35794 15.0434 5.36425 15.0497 5.37263 15.0581C6.66546 16.4202 8.57737 17.7006 10.4872 18.4792C11.5471 18.9095 12.5482 19.1656 13.4653 19.2411C13.6479 19.2558 13.8263 19.2621 14.0005 19.2621C14.8421 19.2621 15.5829 19.0921 16.2105 18.7542C16.37 18.6681 16.5043 18.5695 16.6323 18.4415L18.3931 16.6784C18.7478 16.3237 18.9304 15.8704 18.922 15.3687C18.9115 14.8649 18.7122 14.42 18.3428 14.0779Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <div class="contact-number">
+                    <span>Call Us:</span>
+                    <a href="tel:+123595966">+123 5959 66</a>
+                  </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="header-cart">
+                  <span class="header-border"></span>
+
+                  <button class="cart-button">
+                    <span>
+                      <svg
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_53_138)">
+                          <path
+                            d="M11.1267 24.5359C11.1275 24.8398 11.0358 25.1371 10.8633 25.3903C10.6907 25.6434 10.4451 25.8411 10.1573 25.9583C9.86959 26.0755 9.55267 26.107 9.24659 26.0487C8.94051 25.9905 8.65899 25.8452 8.4376 25.6312C8.21621 25.4171 8.06486 25.144 8.00268 24.8462C7.9405 24.5484 7.97027 24.2393 8.08823 23.958C8.20619 23.6766 8.40706 23.4357 8.66546 23.2655C8.92385 23.0954 9.2282 23.0037 9.54005 23.002H9.55264C9.97012 23.002 10.3705 23.1636 10.6657 23.4512C10.9609 23.7389 11.1267 24.1291 11.1267 24.5359ZM19.6269 23.002H19.6143C19.1957 23.0036 18.7948 23.167 18.4997 23.4563C18.2046 23.7456 18.0393 24.1372 18.0402 24.5451C18.041 24.953 18.2079 25.344 18.5042 25.6321C18.8005 25.9203 19.202 26.0821 19.6206 26.0821C20.0392 26.0821 20.4407 25.9203 20.7369 25.6321C21.0332 25.344 21.2001 24.953 21.2009 24.5451C21.2018 24.1372 21.0365 23.7456 20.7414 23.4563C20.4463 23.167 20.0455 23.0036 19.6269 23.002ZM25.5266 9.18654L24.2497 16.7532C24.2179 17.3062 24.0702 17.8469 23.8155 18.342C23.5609 18.837 23.2047 19.276 22.7691 19.6316C22.3335 19.9872 21.8276 20.252 21.2828 20.4096C20.738 20.5671 20.1658 20.6141 19.6017 20.5476H9.19249C8.36008 20.5442 7.55653 20.2499 6.9278 19.7183C6.29907 19.1866 5.88685 18.4529 5.766 17.6503L3.86072 4.68407C3.80569 4.31993 3.61877 3.987 3.33376 3.7455C3.04874 3.50399 2.68445 3.36984 2.30677 3.36732H1.9718C1.72132 3.36732 1.48109 3.27035 1.30397 3.09775C1.12685 2.92515 1.02734 2.69105 1.02734 2.44695C1.02734 2.20285 1.12685 1.96875 1.30397 1.79614C1.48109 1.62354 1.72132 1.52657 1.9718 1.52657H2.30677C3.13918 1.53002 3.94272 1.82428 4.57146 2.35592C5.20019 2.88756 5.61241 3.62131 5.73326 4.42391L5.84911 5.20807H22.1202C22.6275 5.208 23.1286 5.31654 23.5881 5.52602C24.0476 5.73549 24.4542 6.04078 24.7793 6.4203C25.1044 6.79981 25.3399 7.24429 25.4692 7.7223C25.5986 8.2003 25.6173 8.70017 25.5266 9.18654ZM23.3279 7.60104C23.1805 7.42831 22.9959 7.2893 22.7872 7.19387C22.5785 7.09843 22.3508 7.04891 22.1202 7.04881H6.1186L7.62973 17.3901C7.68498 17.7557 7.87318 18.0898 8.16003 18.3315C8.44688 18.5732 8.81329 18.7064 9.19249 18.7069H19.6017C21.6165 18.7069 22.1026 17.9706 22.3884 16.4403L23.6654 8.87238C23.7089 8.64933 23.7012 8.41965 23.6429 8.19984C23.5845 7.98002 23.477 7.77552 23.3279 7.60104ZM17.7128 11.9575H12.6756C12.4252 11.9575 12.1849 12.0544 12.0078 12.227C11.8307 12.3997 11.7312 12.6338 11.7312 12.8778C11.7312 13.1219 11.8307 13.356 12.0078 13.5287C12.1849 13.7013 12.4252 13.7982 12.6756 13.7982H17.7128C17.9632 13.7982 18.2035 13.7013 18.3806 13.5287C18.5577 13.356 18.6572 13.1219 18.6572 12.8778C18.6572 12.6338 18.5577 12.3997 18.3806 12.227C18.2035 12.0544 17.9632 11.9575 17.7128 11.9575Z"
+                            fill="currentColor"
+                          ></path>
+                        </g>
+
+                        <defs>
+                          <clipPath id="clip0_53_138">
+                            <rect
+                              width="26"
+                              height="26"
+                              fill="white"
+                              transform="translate(0.304688 0.804352)"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+
+                    <span class="cart-count">0</span>
+                  </button>
+
+                  <!-- Mini Cart -->
+                  <div class="mini-cart">
+                    <div class="empty-cart">
+                      <p>Your Bag is Empty</p>
+
+                      <a href="/shop" class="shop-button"> Go To Shop </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Login -->
+                <div class="header-login">
+                  <a href="/login" class="login-button">
+                    <span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.7 17.2C1.5 17.2 1.3 17.1 1.2 17C1.1 16.8 1 16.7 1 16.5C1 15.1 1.4 13.7 2.1 12.4C2.8 11.2 3.9 10.1 5.1 9.4C4.6 8.8 4.2 8 4 7.2C3.9 6.4 3.9 5.5 4.1 4.8C4.3 4 4.8 3.2 5.3 2.6C5.9 2 6.6 1.5 7.3 1.3C7.9 1.1 8.5 1 9.1 1C9.3 1 9.6 1 9.8 1C10.6 1.1 11.4 1.4 12.1 1.9C12.8 2.4 13.3 3 13.7 3.7C14.1 4.4 14.3 5.2 14.3 6.1C14.3 7.3 13.9 8.5 13.1 9.4C13.7 9.8 14.3 10.2 14.9 10.7C15.7 11.5 16.2 12.3 16.7 13.3C17.1 14.3 17.3 15.3 17.3 16.4C17.3 16.6 17.2 16.8 17.1 16.9C17 17 16.8 17.1 16.6 17.1C16.5 17.1 16.4 17.1 16.3 17C16.2 17 16.1 16.9 16.1 16.8C16 16.7 16 16.7 15.9 16.6C15.9 16.5 15.8 16.4 15.8 16.3C15.8 15.4 15.6 14.6 15.3 13.8C15 13 14.5 12.3 13.8 11.7C13.2 11.2 12.6 10.7 11.9 10.4C11.1 10.9 10.2 11.2 9.1 11.2C8.1 11.2 7.1 10.9 6.3 10.4C5.2 10.9 4.2 11.7 3.5 12.8C2.8 13.9 2.4 15.1 2.4 16.4C2.4 16.6 2.3 16.8 2.2 16.9C2.1 17.1 1.9 17.2 1.7 17.2ZM9.1 2.5C8.4 2.5 7.7 2.7 7.1 3.1C6.4 3.5 6 4.1 5.7 4.7C5.4 5.4 5.3 6.1 5.5 6.9C5.6 7.6 6 8.3 6.5 8.8C7 9.3 7.7 9.7 8.4 9.8C8.6 9.8 8.9 9.9 9.1 9.9C9.6 9.9 10.1 9.8 10.5 9.6C11.2 9.3 11.7 8.9 12.2 8.2C12.6 7.6 12.8 6.9 12.8 6.2C12.8 5.2 12.4 4.3 11.7 3.6C11 2.8 10.1 2.5 9.1 2.5Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </span>
+
+                    Login
+                  </a>
+                </div>
+
+                <!-- Menu Button -->
+                <div class="header-menu-bar">
+                  <span class="header-border"></span>
+
+                  <!-- Desktop Menu -->
+                  <button class="desktop-menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+
+                  <!-- Mobile Menu -->
+                  <button class="mobile-menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================================================================= -->
+
+    <!-- MAIN SECTION -->
+    <main>
+      <div class="background_header">
+        <!-- Top black shadow -->
+        <div class="top_shadow_header"></div>
+
+        <!-- Bottom dark shadow -->
+        <div class="whole_shadow"></div>
+
+        <div class="container_shop_page">
+          <div class="shop_row">
+            <div class="shop_column">
+              <div class="text_content" style="text-align: center">
+                <h2 class="title_shop_page">Shop Page</h2>
+
+                <div class="shop_page_list">
+                  <ul>
+                    <li>
+                      <a href="/"> Home </a>
+                    </li>
+
+                    <li>
+                      <i class="fa-sharp fa-solid fa-angle-right"></i>
+                    </li>
+
+                    <li>Pages</li>
+
+                    <li>
+                      <i class="fa-sharp fa-solid fa-angle-right"></i>
+                    </li>
+
+                    <li>Shop Archive Page</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

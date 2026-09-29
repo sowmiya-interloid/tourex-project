@@ -1,0 +1,635 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #353844;
+  line-height: 26px;
+}
+
+/* ======================= */
+
+.header-area {
+  display: block;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 999;
+}
+
+/* ======================= */
+
+.container {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================== */
+
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  margin-top: 0;
+  margin-right: -12px;
+  margin-left: -12px;
+  color: rgb(53, 56, 68);
+}
+
+.header-column {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+
+  max-width: 100%;
+
+  padding-left: 12px;
+  padding-right: 12px;
+  color: rgb(53, 56, 68);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  color: rgb(53, 56, 68);
+}
+
+.logo {
+  display: block;
+}
+
+.white-logo {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.white-logo img {
+  max-width: 100%;
+  display: block;
+}
+
+.green-logo {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.green-logo.hidden {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  transition: all 0.3s ease-out;
+  vertical-align: middle;
+}
+
+.header-area a {
+  color: rgb(53, 56, 68);
+  outline: none;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+/* ============================================== */
+
+/* ============================================== */
+/* NAVIGATION */
+
+.main-navigation {
+  display: block;
+  margin-left: 0px;
+}
+
+.navigation-wrapper {
+  display: none;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.main-menu li {
+  display: block;
+  position: relative;
+  list-style: none;
+}
+
+/* Main menu links */
+
+.main-menu li > a {
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: white;
+  padding: 35px 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+/* Dropdown arrow */
+
+.main-menu li.has-submenu > a::after {
+  content: "\f107";
+  display: block;
+  font-family: "Font Awesome 6 Free";
+  font-size: 12px;
+  font-weight: 900;
+  margin-left: 4px;
+}
+
+/* Submenu */
+
+.main-menu li .submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 230px;
+  background: white;
+  margin: 0;
+  padding: 18px 0;
+
+  transform: scaleY(0);
+  transform-origin: 0 0;
+
+  transition: all 0.3s ease-out;
+
+  box-shadow: 0 30px 70px 0 rgba(137, 139, 142, 0.15);
+
+  border-radius: 0;
+
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  z-index: 9;
+}
+
+/* SHOW SUBMENU ON HOVER */
+
+.main-menu li.has-submenu:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* Submenu items */
+
+.main-menu li .submenu li {
+  display: block;
+  margin-left: 0;
+  text-align: left;
+}
+
+/* Submenu links */
+
+.main-menu li .submenu li a {
+  padding: 6px 15px 6px 25px;
+  display: block;
+  color: #020615;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* ============================================== */
+
+.header-right-column {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+  max-width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  color: white;
+  border: 1.2px solid rgb(197, 197, 197);
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 34px;
+  display: none;
+  margin-right: 5px;
+}
+
+.contact-icon svg {
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.contact-number {
+  display: none;
+}
+
+.contact-number span {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: white;
+  display: block;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.contact-number a {
+  text-transform: capitalize;
+  color: white;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+/* ============================================== */
+
+.header-cart {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  display: none;
+}
+
+.header-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1.5px solid rgb(197, 197, 197);
+  height: 20px;
+  width: 2px;
+  display: none;
+}
+
+.cart-button {
+  color: white;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+.cart-count {
+  position: absolute;
+  right: -6px;
+  top: -5px;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: capitalize;
+  color: white;
+  background: rgb(247, 74, 31);
+  text-align: center;
+  line-height: 17px;
+  border-radius: 20px;
+}
+
+.mini-cart {
+  background: white;
+  padding: 25px;
+  position: absolute;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(61, 110, 168, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  top: 100%;
+  right: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  text-align: start;
+  transition: 0.4s;
+  z-index: 9;
+}
+
+.header-cart:hover .mini-cart {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.empty-cart {
+  margin-bottom: 30px;
+}
+
+.empty-cart p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.shop-button {
+  cursor: pointer;
+}
+
+/* ============================================== */
+
+.header-login {
+  margin-left: 20px;
+  display: none;
+}
+
+.header-area .login-button {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: white;
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 6px 20px;
+  display: inline-block;
+  background: transparent;
+}
+
+.login-button span {
+  transform: translateY(-2px);
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.login-button svg {
+  vertical-align: middle;
+}
+
+/* ============================================== */
+
+.header-menu-bar {
+  position: relative;
+  padding-left: 20px;
+  margin-left: 20px;
+  line-height: 1;
+}
+
+.desktop-menu-button,
+.mobile-menu-button {
+  line-height: 0;
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+.desktop-menu-button {
+  display: none;
+}
+
+.mobile-menu-button {
+  display: block;
+}
+
+.desktop-menu-button span,
+.mobile-menu-button span {
+  height: 2px;
+  width: 34px;
+  background-color: white;
+  display: block;
+  border-radius: 6px;
+}
+
+.desktop-menu-button span:not(:last-child),
+.mobile-menu-button span:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+/* =============================================================================================================== */
+
+/* background image for header */
+.background_header {
+  background-image: url("tourex_image/background_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 371px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top black shadow */
+.top_shadow_header {
+  position: absolute;
+  width: 100%;
+  height: 188px;
+
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+}
+
+/* Bottom dark shadow */
+.whole_shadow {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+
+  z-index: 1;
+}
+
+.container_shop_page {
+  width: 100%;
+  padding: 0px 12px;
+  height: 121px;
+  position: absolute;
+  z-index: 2;
+}
+
+.shop_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.shop_column {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.title_shop_page {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.title_shop_page {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  margin: 0 0 5px 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.shop_page_list {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+}
+
+.shop_page_list ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop_page_list ul li {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  text-transform: capitalize;
+  margin-right: 8px;
+  padding: 5px 0;
+}
+
+.shop_page_list ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.shop_page_list ul li i {
+  font-size: 16px;
+  line-height: 16px;
+  color: white;
+}
+
+/* ================================= */
+
+@media (min-width: 576px) {
+  .header-login {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-right-column {
+    width: 41.66666667%;
+  }
+
+  .header-column {
+    width: 58.33333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-navigation {
+    margin-left: 180px;
+  }
+
+  .background_header {
+    padding-top: 182px;
+    padding-bottom: 128px;
+  }
+
+  .navigation-wrapper {
+    display: flex;
+  }
+
+  .header-border {
+    display: block;
+  }
+
+  .desktop-menu-button {
+    display: block;
+  }
+
+  .mobile-menu-button {
+    display: none;
+  }
+
+  .header-cart {
+    display: block;
+  }
+
+  .contact-number {
+    display: block;
+  }
+
+  .contact-icon {
+    display: inline-block;
+  }
+}
