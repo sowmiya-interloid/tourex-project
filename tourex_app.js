@@ -51,6 +51,8 @@ async function loadProducts() {
   }
 }
 
+/* ================= CATEGORIES ================= */
+
 function renderCategories() {
   const counts = {};
 
@@ -114,11 +116,15 @@ categoryList.addEventListener("keydown", function (event) {
   }
 });
 
+/* ================= SEARCH ================= */
+
 searchInput.addEventListener("input", function () {
   searchText = searchInput.value.trim().toLowerCase();
   currentPage = 1;
   displayProducts();
 });
+
+/* ================= CARDS ================= */
 
 const STAR = `<svg class="star-svg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>`;
 
@@ -138,7 +144,7 @@ function createCard(product) {
     : "";
 
   return `
-    <div class="product-card" data-title="${product.title}">
+    <div class="product-card" data-id="${product.id}">
 
       <div class="product-img">
 
@@ -146,7 +152,7 @@ function createCard(product) {
 
         <div class="card-actions">
 
-          <button class="act-btn wish ${wishlist.has(product.title) ? "active" : ""}" data-action="wish" aria-label="Wishlist">
+          <button class="act-btn wish ${wishlist.has(product.id) ? "active" : ""}" data-action="wish" aria-label="Wishlist">
             <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.96 2.2377C15.5678 1.84531 15.1022 1.53404 14.5896 1.32168C14.0771 1.10931 13.5277 1 12.973 1C12.4182 1 11.8688 1.10931 11.3563 1.32168C10.8437 1.53404 10.3781 1.84531 9.98587 2.2377L9.17191 3.05166L8.35794 2.2377C7.56572 1.44548 6.49123 1.00041 5.37086 1.00041C4.25049 1.00041 3.176 1.44548 2.38378 2.2377C1.59155 3.02993 1.14648 4.10441 1.14648 5.22479C1.14648 6.34516 1.59155 7.41965 2.38378 8.21187L9.17191 15L15.96 8.21187C16.3524 7.81967 16.6637 7.354 16.8761 6.84146C17.0884 6.32893 17.1977 5.77958 17.1977 5.22479C17.1977 4.67 17.0884 4.12064 16.8761 3.60811C16.6637 3.09558 16.3524 2.6299 15.96 2.2377Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </button>
 
@@ -168,7 +174,7 @@ function createCard(product) {
 
         <div class="rating-row">
           <div class="product-ratings">${createStars(product.rating)}</div>
-          <span class="reviews">${product.review}</span>
+          <span class="reviews">(${product.review})</span>
         </div>
 
         <div class="product-price">
@@ -187,7 +193,6 @@ function createCard(product) {
 productGrid.addEventListener("click", function (event) {
   const button = event.target.closest(".act-btn");
 
-  /* touch screens: tap the image to show / hide cart + compare */
   if (!button) {
     const tapped = event.target.closest(".product-card");
 
@@ -205,20 +210,20 @@ productGrid.addEventListener("click", function (event) {
   }
 
   const card = button.closest(".product-card");
-  const title = card.dataset.title;
+  const id = Number(card.dataset.id);
 
-  /* heart: toggle on / off */
+  
   if (button.dataset.action === "wish") {
-    if (wishlist.has(title)) {
-      wishlist.delete(title);
+    if (wishlist.has(id)) {
+      wishlist.delete(id);
     } else {
-      wishlist.add(title);
+      wishlist.add(id);
     }
 
-    button.classList.toggle("active", wishlist.has(title));
+    button.classList.toggle("active", wishlist.has(id));
   }
 
-  /* cart: bump the number on the header cart badge */
+
   if (button.dataset.action === "cart") {
     cartCount++;
 
@@ -283,7 +288,6 @@ function displayProducts() {
 
   productGrid.classList.toggle("list-view", currentView === "list");
 
-  /* CARDS */
   productGrid.innerHTML =
     totalProducts === 0
       ? `<p class="no-result">No products found</p>`
@@ -316,7 +320,7 @@ function createPagination(totalPages) {
 
   html += `
     <li>
-      <button class="pg-nav" data-page="${currentPage + 1}" ${currentPage === totalPages ? "disabled" : ""}>
+      <button class="pg-nav" id="page-nav"  data-page="${currentPage + 1}" ${currentPage === totalPages ? "disabled" : ""}>
         Next Page
       </button>
     </li>
@@ -339,13 +343,11 @@ function openSort(open) {
   sortCurrent.setAttribute("aria-expanded", open);
 }
 
-/* arrow button: open / close */
 sortCurrent.addEventListener("click", function (event) {
   event.stopPropagation();
   openSort(!sortDropdown.classList.contains("open"));
 });
 
-/* choose an option */
 sortList.addEventListener("click", function (event) {
   const li = event.target.closest("li");
 
@@ -364,7 +366,6 @@ sortList.addEventListener("click", function (event) {
   displayProducts();
 });
 
-/* click outside or press Esc: close */
 document.addEventListener("click", function () {
   openSort(false);
 });
@@ -372,6 +373,8 @@ document.addEventListener("click", function () {
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") openSort(false);
 });
+
+
 
 const viewButtons = document.querySelectorAll(".view-btn");
 
@@ -390,3 +393,105 @@ viewButtons.forEach(function (button) {
 });
 
 loadProducts();
+
+
+
+const headerArea = document.querySelector(".header-area");
+const headerLogo = headerArea.querySelector(".white-logo img");
+const backToTop = document.getElementById("backToTop");
+
+const LOGO_LIGHT = "tourex_image/logo_header.webp";
+const LOGO_DARK = "tourex_image/logo_dark.webp";
+const STICKY_AT = 250;
+
+new Image().src = LOGO_DARK; 
+
+function onPageScroll() {
+  const scrolled = window.scrollY > STICKY_AT;
+
+  if (scrolled !== headerArea.classList.contains("sticky")) {
+    headerArea.classList.toggle("sticky", scrolled);
+    headerLogo.src = scrolled ? LOGO_DARK : LOGO_LIGHT;
+  }
+
+  backToTop.classList.toggle("show", scrolled);
+}
+
+window.addEventListener("scroll", onPageScroll, { passive: true });
+onPageScroll();
+
+backToTop.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const overlay = document.getElementById("offcanvasOverlay");
+const mobileMenu = document.getElementById("mobileMenu");
+const infoPanel = document.getElementById("infoPanel");
+
+function closePanels() {
+  [mobileMenu, infoPanel].forEach(function (panel) {
+    panel.classList.remove("open");
+    panel.setAttribute("aria-hidden", "true");
+  });
+
+  overlay.classList.remove("show");
+  document.body.classList.remove("no-scroll");
+}
+
+function openPanel(panel) {
+  closePanels();
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
+  overlay.classList.add("show");
+  document.body.classList.add("no-scroll");
+}
+
+document
+  .querySelector(".mobile-menu-button")
+  .addEventListener("click", function () {
+    openPanel(mobileMenu);
+  });
+
+document
+  .querySelector(".desktop-menu-button")
+  .addEventListener("click", function () {
+    openPanel(infoPanel);
+  });
+
+overlay.addEventListener("click", closePanels);
+
+document.querySelectorAll("[data-close]").forEach(function (btn) {
+  btn.addEventListener("click", closePanels);
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") closePanels();
+});
+
+
+window
+  .matchMedia("(min-width: 1200px)")
+  .addEventListener("change", closePanels);
+
+
+
+document.querySelectorAll(".mobile-has-sub").forEach(function (item) {
+  const row = item.querySelector(".mobile-row");
+  const sub = item.querySelector(".mobile-sub");
+
+  row.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const willOpen = !item.classList.contains("open");
+
+    document.querySelectorAll(".mobile-has-sub.open").forEach(function (o) {
+      o.classList.remove("open");
+      o.querySelector(".mobile-sub").style.maxHeight = null;
+    });
+
+    if (willOpen) {
+      item.classList.add("open");
+      sub.style.maxHeight = sub.scrollHeight + "px";
+    }
+  });
+});

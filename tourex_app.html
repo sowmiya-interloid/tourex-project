@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,7 +14,6 @@
       rel="stylesheet"
     />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="tourex_app.css" />
 
     <script src="tourex_app.js" defer></script>
@@ -249,8 +247,6 @@
       </div>
     </header>
 
-    <!-- ======================================================================================================= -->
-
     <!-- MAIN SECTION -->
     <main>
       <div class="background_header">
@@ -260,6 +256,14 @@
         <!-- Bottom dark shadow -->
         <div class="whole_shadow"></div>
 
+        <!-- NEW: curved white shapes (768px and up) -->
+        <div class="tg-hero-bottom-shape">
+          <img src="tourex_image/breadcrumb_shape_1.png" alt="" />
+        </div>
+        <div class="tg-hero-bottom-shape-2">
+          <img src="tourex_image/breadcrumb_shape_2.png" alt="" />
+        </div>
+
         <div class="container_shop_page">
           <div class="shop_row">
             <div class="shop_column">
@@ -268,17 +272,19 @@
 
                 <div class="shop_page_list">
                   <ul>
-                    <li >
-                      <a href="/" style="position: relative; left: 2px;"> Home </a>
+                    <li>
+                      <a href="/" style="position: relative; left: 2px">
+                        Home
+                      </a>
                     </li>
 
-                    <li style="position: relative; left: 1px;">
+                    <li style="position: relative; left: 1px">
                       <i class="fa-sharp fa-solid fa-angle-right"></i>
                     </li>
 
                     <li>Pages</li>
 
-                    <li style="position: relative; left: -1px;">
+                    <li style="position: relative; left: -1px">
                       <i class="fa-sharp fa-solid fa-angle-right"></i>
                     </li>
 
@@ -290,7 +296,6 @@
           </div>
         </div>
       </div>
-      <!-- ============================================================================================= -->
 
       <div class="shop-main-container">
         <div class="main-container-shop-card">
@@ -335,8 +340,6 @@
                 </div>
               </div>
 
-              <!-- Categories Container (the <li> items are created by JavaScript) -->
-
               <div class="categories">
                 <h5>Categories</h5>
                 <div class="product-list-category">
@@ -372,7 +375,6 @@
                   </ul>
                 </div>
               </div>
-              <!-- =============================== -->
 
               <!-- Best Selling Products -->
               <div class="best-sell-products">
@@ -385,7 +387,7 @@
                   <div class="price-details">
                     <h4>Camera nstax</h4>
 
-                    <div class="product-ratings">
+                    <div class="product-ratings1">
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
@@ -406,7 +408,7 @@
                   <div class="price-details">
                     <h4>Hats Men Caps</h4>
 
-                    <div class="product-ratings">
+                    <div class="product-ratings1">
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
@@ -427,7 +429,7 @@
                   <div class="price-details">
                     <h4>Canon EOS R100</h4>
 
-                    <div class="product-ratings">
+                    <div class="product-ratings1">
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
@@ -446,7 +448,7 @@
                   <div class="price-details">
                     <h4>Halo Smartwatch</h4>
 
-                    <div class="product-ratings">
+                    <div class="product-ratings1">
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
                       <span><i class="fa-sharp fa-solid fa-star"></i></span>
@@ -463,45 +465,110 @@
             <!-- ================= Card Section ===================== -->
 
             <section class="product-card-section">
-              <div class="show-the-result">
-                <div class="container-result">
-                  <span id="resultText">Loading...</span>
-                  <div class="result-tools">
-                    <div class="sort-dropdown" id="sortDropdown">
-                      <button
-                        type="button"
-                        class="sort-current"
-                        id="sortCurrent"
-                        aria-haspopup="listbox"
-                        aria-expanded="false"
+              <div class="container-result">
+                <span id="resultText">Loading...</span>
+                <div class="result-tools">
+                  <div class="sort-dropdown" id="sortDropdown">
+                    <button
+                      type="button"
+                      class="sort-current"
+                      id="sortCurrent"
+                      aria-haspopup="listbox"
+                      aria-expanded="false"
+                    >
+                      <span id="sortLabel">Default sorting</span>
+                      <svg
+                        class="sort-arrow"
+                        width="12"
+                        height="8"
+                        viewBox="0 0 12 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <span id="sortLabel">Default sorting</span>
-                        <svg class="sort-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
-                      </button>
+                        <path
+                          d="M1 1.5l5 5 5-5"
+                          stroke="currentColor"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                        ></path>
+                      </svg>
+                    </button>
 
-                      <ul class="sort-list" role="listbox">
-                        <li class="selected" role="option" data-value="default">Default sorting</li>
-                        <li role="option" data-value="offers">Sort by Best Offers</li>
-                        <li role="option" data-value="price">Sort by price</li>
-                        <li role="option" data-value="rating">Sort by rating</li>
-                      </ul>
-                    </div>
-                    <div class="view-toggle">
-                      <button
-                        class="view-btn active"
-                        data-view="grid"
-                        aria-label="Grid view"
+                    <ul class="sort-list" role="listbox">
+                      <li class="selected" role="option" data-value="default">
+                        Default sorting
+                      </li>
+                      <li role="option" data-value="offers">
+                        Sort by Best Offers
+                      </li>
+                      <li role="option" data-value="price">Sort by price</li>
+                      <li role="option" data-value="rating">Sort by rating</li>
+                    </ul>
+                  </div>
+                  <div class="view-toggle">
+                    <button
+                      class="view-btn active"
+                      data-view="grid"
+                      aria-label="Grid view"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1H1V8H8V1Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 1H12V8H19V1Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 12H12V19H19V12Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 12H1V19H8V12Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      </button>
-                      <button
-                        class="view-btn"
-                        data-view="list"
-                        aria-label="List view"
+                        <path
+                          d="M8 1H1V8H8V1Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M19 1H12V8H19V1Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M19 12H12V19H19V12Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M8 12H1V19H8V12Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button
+                      class="view-btn1"
+                      data-view="list"
+                      aria-label="List view"
+                    >
+                      <svg
+                        width="20"
+                        height="14"
+                        viewBox="0 0 20 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1H19M6 7H19M6 13H19M1 1H1.01M1 7H1.01M1 13H1.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      </button>
-                    </div>
+                        <path
+                          d="M6 1H19M6 7H19M6 13H19M1 1H1.01M1 7H1.01M1 13H1.01"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -512,12 +579,340 @@
           </div>
         </div>
       </div>
-
-      <!-- ======================= -->
     </main>
 
-    <footer>
-      <div class="main-footer-section"></div>
+    <aside
+      class="offcanvas mobile-offcanvas"
+      id="mobileMenu"
+      aria-hidden="true"
+    >
+      <div class="mobile-head">
+        <a href="/"
+          ><img
+            src="tourex_image/logo_dark.webp"
+            alt="Tourex"
+            width="150"
+            height="35"
+        /></a>
+        <button class="mobile-close" data-close aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form class="mobile-search" onsubmit="return false;">
+        <input type="text" placeholder="Search here..." />
+      </form>
+
+      <ul class="mobile-nav">
+        <li class="mobile-has-sub">
+          <div class="mobile-row">
+            <a href="#">Home</a
+            ><button class="sub-toggle" aria-label="Toggle submenu"></button>
+          </div>
+          <ul class="mobile-sub">
+            <li><a href="/">Home One (Travel)</a></li>
+            <li><a href="/home-two">Home Two (Travel)</a></li>
+            <li><a href="/home-three">Home Three (Travel)</a></li>
+            <li><a href="/home-four">Home Four (Hotel)</a></li>
+            <li><a href="/home-five">Home Five (Hotel)</a></li>
+            <li><a href="/home-six">Home Six (Hotel)</a></li>
+            <li><a href="/home-seven">Home Seven (Restaurant)</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-has-sub">
+          <div class="mobile-row">
+            <a href="#">Features</a
+            ><button class="sub-toggle" aria-label="Toggle submenu"></button>
+          </div>
+          <ul class="mobile-sub">
+            <li><a href="/hotel-grid">Hotel Grid</a></li>
+            <li><a href="/tour-grid-1">Tour Grid One</a></li>
+            <li><a href="/tour-grid-2">Tour Grid Two</a></li>
+            <li><a href="/map-listing">Hotel Listing</a></li>
+            <li><a href="/tour-details">Tour Details One</a></li>
+            <li><a href="/tour-details-2">Tour Details Two</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-has-sub">
+          <div class="mobile-row">
+            <a href="#">Pages</a
+            ><button class="sub-toggle" aria-label="Toggle submenu"></button>
+          </div>
+          <ul class="mobile-sub">
+            <li><a href="/about">About</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/team-details">Team Details</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/shop-details">Shop Details</a></li>
+            <li><a href="/cart">Cart</a></li>
+            <li><a href="/wishlist">Wishlist</a></li>
+            <li><a href="/checkout">Checkout</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/faq">Faq</a></li>
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/no-found">Error</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-has-sub">
+          <div class="mobile-row">
+            <a href="#">Blogs</a
+            ><button class="sub-toggle" aria-label="Toggle submenu"></button>
+          </div>
+          <ul class="mobile-sub">
+            <li><a href="/blog-grid">Blog Grid</a></li>
+            <li><a href="/blog-standard">Blog Standard</a></li>
+            <li><a href="/blog-details">Blog Details</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-single"><a href="/contact">Contact</a></li>
+      </ul>
+
+      <div class="mobile-social">
+        <a href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a href="#" aria-label="Twitter"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="#" aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="#" aria-label="YouTube"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+    </aside>
+
+    <aside class="offcanvas info-offcanvas" id="infoPanel" aria-hidden="true">
+      <button class="info-close" data-close aria-label="Close panel">
+        <i class="fa-solid fa-xmark" style="font-size: 21px"></i>
+      </button>
+
+      <a class="info-logo" href="/">
+        <img
+          src="tourex_image/logo_dark.webp"
+          alt="Tourex"
+          width="126"
+          height="34"
+        />
+      </a>
+
+      <div class="info-line"></div>
+
+      <div class="info-block">
+        <h4>Office Address</h4>
+        <p>123/A, Miranda City Likaoli<br />Prikano, Dope</p>
+      </div>
+
+      <div class="info-block">
+        <h4>Phone Number</h4>
+        <p>+0989 7876 9865 9<br />+(090) 8765 86543 85</p>
+      </div>
+
+      <div class="info-block">
+        <h4>Email Address</h4>
+        <p>info@example.com<br />example.mail@hum.com</p>
+      </div>
+
+      <div class="info-social">
+        <a href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a href="#" aria-label="Twitter"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="#" aria-label="Google"
+          ><i class="fa-brands fa-google-plus-g"></i
+        ></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-row">
+            <!-- column 1 -->
+            <div class="footer-col">
+              <div class="footer-widget">
+                <a class="footer-logo" href="/">
+                  <img
+                    src="tourex_image/logo_header.webp"
+                    alt="Tourex"
+                    width="126"
+                    height="35"
+                  />
+                </a>
+
+                <p class="footer-text">
+                  Pharetra maecenas felis vestibulum convallis mollis nullam
+                  congue Sit.D rivers of Finland Quebec.
+                </p>
+
+                <form class="footer-form" onsubmit="return false;">
+                  <input type="email" placeholder="Enter your mail" />
+                  <button type="submit" aria-label="Subscribe">
+                    <svg
+                      width="22"
+                      height="17"
+                      viewBox="0 0 22 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.52514 8.47486H20.4749M20.4749 8.47486L13.5 1.5M20.4749 8.47486L13.5 15.4497"
+                        stroke="white"
+                        stroke-width="1.77778"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </form>
+
+                <div class="footer-social">
+                  <a href="#" aria-label="Facebook"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" aria-label="Twitter"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                  <a href="#" aria-label="Instagram"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#" aria-label="Pinterest"
+                    ><i class="fa-brands fa-pinterest-p"></i
+                  ></a>
+                  <a href="#" aria-label="YouTube"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="footer-widget footer-links footer-quick">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Tour Guide</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="footer-widget footer-info">
+                <h3 class="footer-title">Information</h3>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"
+                    >
+                      <span class="footer-icon">
+                        <svg
+                          width="20"
+                          height="24"
+                          viewBox="0 0 20 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.0013 10.0608C19.0013 16.8486 10.3346 22.6668 10.3346 22.6668C10.3346 22.6668 1.66797 16.8486 1.66797 10.0608C1.66797 7.74615 2.58106 5.52634 4.20638 3.88965C5.83169 2.25297 8.03609 1.3335 10.3346 1.3335C12.6332 1.3335 14.8376 2.25297 16.4629 3.88965C18.0882 5.52634 19.0013 7.74615 19.0013 10.0608Z"
+                            stroke="white"
+                            stroke-width="1.73333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M10.3346 12.9699C11.9301 12.9699 13.2235 11.6674 13.2235 10.0608C13.2235 8.45412 11.9301 7.15168 10.3346 7.15168C8.73915 7.15168 7.44575 8.45412 7.44575 10.0608C7.44575 11.6674 8.73915 12.9699 10.3346 12.9699Z"
+                            stroke="white"
+                            stroke-width="1.73333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span
+                        >58 Street Commercial Road<br />Fratton, Australia</span
+                      >
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="tel:+1238889999">
+                      <span class="footer-icon"
+                        ><i class="fa-sharp fa-solid fa-phone"></i
+                      ></span>
+                      <span>+123 888 9999</span>
+                    </a>
+                  </li>
+
+                  <li class="footer-hours-item">
+                    <span class="footer-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.9987 5.60006V12.0001L16.2654 14.1334M22.6654 12.0002C22.6654 17.8912 17.8897 22.6668 11.9987 22.6668C6.10766 22.6668 1.33203 17.8912 1.33203 12.0002C1.33203 6.10912 6.10766 1.3335 11.9987 1.3335C17.8897 1.3335 22.6654 6.10912 22.6654 12.0002Z"
+                          stroke="white"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                    <p class="footer-hours">
+                      Mon – Sat: 8 am – 5 pm,<br />
+                      Sunday:
+                      <span class="closed">CLOSED</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="footer-widget footer-links footer-utility">
+                <h3 class="footer-title">Utility Pages</h3>
+                <ul>
+                  <li><a href="#">Style Guide</a></li>
+                  <li><a href="#">Password Protected</a></li>
+                  <li><a href="#">404 Error</a></li>
+                  <li><a href="#">Changelog</a></li>
+                  <li><a href="#">License</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <span>Copyright <a href="#">©Tourex</a> | All Right Reserved</span>
+      </div>
     </footer>
+
+    <button id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
   </body>
 </html>
