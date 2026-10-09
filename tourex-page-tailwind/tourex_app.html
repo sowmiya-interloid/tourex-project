@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        future: { hoverOnlyWhenSupported: true },
+        theme: {
+          screens: {
+            sm: "576px",
+            md: "768px",
+            lg: "992px",
+            xl: "1200px",
+            xxl: "1400px",
+          },
+          extend: {
+            colors: { primary: "#560ce3", dark: "#020615", body: "#353844" },
+            fontFamily: { sans: ["Poppins", "sans-serif"] },
+            keyframes: {
+              slide: {
+                from: { transform: "translateY(-100%)" },
+                to: { transform: "translateY(0)" },
+              },
+            },
+            animation: { slide: "slide .5s ease" },
+          },
+        },
+      };
+    </script>
+
+    <script src="tourex_app.js" defer></script>
+    <title>Shop Page</title>
+  </head>
+
+  <body class="m-0 font-sans text-base font-normal leading-[26px] text-body">
+    <header class="header">
+      <div
+        class="header-area group/h absolute inset-x-0 top-0 z-[2] py-[14px] data-[sticky=true]:fixed data-[sticky=true]:z-[99] data-[sticky=true]:animate-slide data-[sticky=true]:bg-white data-[sticky=true]:shadow-[0_10px_15px_rgba(25,25,25,0.1)] xl:data-[sticky=true]:py-0 min-[1440px]:py-0"
+        data-sticky="false"
+      >
+        <div class="w-full px-3">
+          <div class="header-row -mx-3 flex flex-wrap items-center">
+            <!-- LEFT SIDE -->
+            <div class="w-[41.66666667%] px-3 lg:w-[58.33333333%]">
+              <div class="header-content flex items-center">
+                <!-- LOGO -->
+                <div class="logo block">
+                  <a class="white-logo cursor-pointer" href="/">
+                    <img
+                      class="inline align-middle h-[35px]"
+                      src="tourex_image/logo_header.webp"
+                      alt="Logo"
+                      width="126"
+                      height="35"
+                    />
+                  </a>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="main-navigation ml-0 xl:ml-[180px]">
+                  <div class="navigation-wrapper hidden xl:flex">
+                    <ul class="main-menu flex">
+                      <!-- HOME -->
+                      <li class="has-submenu group/m relative block">
+                        <a
+                          href="#"
+                          class="relative z-[1] flex items-center px-3 py-[35px] text-[15px] font-medium capitalize text-white transition-all duration-300 ease-out after:ml-1 after:block after:font-['Font_Awesome_6_Free'] after:text-xs after:font-black after:content-['\f107'] group-data-[sticky=true]/h:!text-dark xl:group-data-[sticky=true]/h:py-[21px]"
+                          >Home</a
+                        >
+                        <ul
+                          class="submenu invisible absolute left-0 top-full min-w-[230px] origin-top-left scale-y-0 bg-white py-[18px] shadow-[0_30px_70px_0_rgba(137,139,142,0.15)] transition-all duration-300 ease-out group-hover/m:visible group-hover/m:scale-y-100 [&_a]:block [&_a]:whitespace-nowrap [&_a]:py-1.5 [&_a]:pl-[25px] [&_a]:pr-[15px] [&_a]:text-sm [&_a]:font-normal [&_a]:capitalize [&_a]:text-dark [&_li]:block [&_li]:text-left"
+                        >
+                          <li><a href="/">Home One (Travel)</a></li>
+                          <li><a href="/home-two">Home Two (Travel)</a></li>
+                          <li><a href="/home-three">Home Three (Travel)</a></li>
+                          <li><a href="/home-four">Home Four (Hotel)</a></li>
+                          <li><a href="/home-five">Home Five (Hotel)</a></li>
+                          <li><a href="/home-six">Home Six (Hotel)</a></li>
+                          <li>
+                            <a href="/home-seven">Home Seven (Restaurant)</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- FEATURES -->
+                      <li class="has-submenu group/m relative block">
+                        <a
+                          href="#"
+                          class="relative z-[1] flex items-center px-3 py-[35px] text-[15px] font-medium capitalize text-white transition-all duration-300 ease-out after:ml-1 after:block after:font-['Font_Awesome_6_Free'] after:text-xs after:font-black after:content-['\f107'] group-data-[sticky=true]/h:!text-dark xl:group-data-[sticky=true]/h:py-[21px]"
+                          >Features</a
+                        >
+                        <ul
+                          class="submenu invisible absolute left-0 top-full min-w-[230px] origin-top-left scale-y-0 bg-white py-[18px] shadow-[0_30px_70px_0_rgba(137,139,142,0.15)] transition-all duration-300 ease-out group-hover/m:visible group-hover/m:scale-y-100 [&_a]:block [&_a]:whitespace-nowrap [&_a]:py-1.5 [&_a]:pl-[25px] [&_a]:pr-[15px] [&_a]:text-sm [&_a]:font-normal [&_a]:capitalize [&_a]:text-dark [&_li]:block [&_li]:text-left"
+                        >
+                          <li><a href="/hotel-grid">Hotel Grid</a></li>
+                          <li><a href="/tour-grid-1">Tour Grid One</a></li>
+                          <li><a href="/tour-grid-2">Tour Grid Two</a></li>
+                          <li><a href="/map-listing">Hotel Listing</a></li>
+                          <li><a href="/tour-details">Tour Details One</a></li>
+                          <li>
+                            <a href="/tour-details-2">Tour Details Two</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <!-- PAGES -->
+                      <li class="has-submenu group/m relative block">
+                        <a
+                          class="active relative z-[1] flex items-center px-3 py-[35px] text-[15px] font-medium capitalize text-white transition-all duration-300 ease-out after:ml-1 after:block after:font-['Font_Awesome_6_Free'] after:text-xs after:font-black after:content-['\f107'] group-data-[sticky=true]/h:!text-dark xl:group-data-[sticky=true]/h:py-[21px]"
+                          href="#"
+                          style="color: rgb(169, 125, 210)"
+                          >Pages</a
+                        >
+                        <ul
+                          class="submenu invisible absolute left-0 top-full min-w-[230px] origin-top-left scale-y-0 bg-white py-[18px] shadow-[0_30px_70px_0_rgba(137,139,142,0.15)] transition-all duration-300 ease-out group-hover/m:visible group-hover/m:scale-y-100 [&_a]:block [&_a]:whitespace-nowrap [&_a]:py-1.5 [&_a]:pl-[25px] [&_a]:pr-[15px] [&_a]:text-sm [&_a]:font-normal [&_a]:capitalize [&_a]:text-dark [&_li]:block [&_li]:text-left"
+                        >
+                          <li><a href="/about">About</a></li>
+                          <li><a href="/team">Team</a></li>
+                          <li><a href="/team-details">Team Details</a></li>
+                          <li><a class="active" href="/shop">Shop</a></li>
+                          <li><a href="/shop-details">Shop Details</a></li>
+                          <li><a href="/cart">Cart</a></li>
+                          <li><a href="/wishlist">Wishlist</a></li>
+                          <li><a href="/checkout">Checkout</a></li>
+                          <li><a href="/pricing">Pricing</a></li>
+                          <li><a href="/faq">Faq</a></li>
+                          <li><a href="/login">Log In</a></li>
+                          <li><a href="/register">Register</a></li>
+                          <li><a href="/no-found">Error</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- BLOGS -->
+                      <li class="has-submenu group/m relative block">
+                        <a
+                          href="#"
+                          class="relative z-[1] flex items-center px-3 py-[35px] text-[15px] font-medium capitalize text-white transition-all duration-300 ease-out after:ml-1 after:block after:font-['Font_Awesome_6_Free'] after:text-xs after:font-black after:content-['\f107'] group-data-[sticky=true]/h:!text-dark xl:group-data-[sticky=true]/h:py-[21px]"
+                          >Blogs</a
+                        >
+                        <ul
+                          class="submenu invisible absolute left-0 top-full min-w-[230px] origin-top-left scale-y-0 bg-white py-[18px] shadow-[0_30px_70px_0_rgba(137,139,142,0.15)] transition-all duration-300 ease-out group-hover/m:visible group-hover/m:scale-y-100 [&_a]:block [&_a]:whitespace-nowrap [&_a]:py-1.5 [&_a]:pl-[25px] [&_a]:pr-[15px] [&_a]:text-sm [&_a]:font-normal [&_a]:capitalize [&_a]:text-dark [&_li]:block [&_li]:text-left"
+                        >
+                          <li><a href="/blog-grid">Blog Grid</a></li>
+                          <li><a href="/blog-standard">Blog Standard</a></li>
+                          <li><a href="/blog-details">Blog Details</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- CONTACT -->
+                      <li class="relative block">
+                        <a
+                          href="/contact"
+                          class="relative z-[1] flex items-center px-3 py-[35px] text-[15px] font-medium capitalize text-white transition-all duration-300 ease-out group-data-[sticky=true]/h:!text-dark xl:group-data-[sticky=true]/h:py-[21px]"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div
+              class="header-right-column w-[58.33333333%] px-3 lg:w-[41.66666667%]"
+            >
+              <div class="header-right flex items-center justify-end md:h-10">
+                <!-- Contact -->
+                <div class="header-contact flex items-center">
+                  <span
+                    class="contact-icon mr-[5px] hidden h-9 w-9 rounded-full border-[1.2px] border-[#c5c5c5] text-center leading-[34px] text-white group-data-[sticky=true]/h:border-[#bbbcc0] group-data-[sticky=true]/h:text-dark xl:inline-block"
+                  >
+                    <svg
+                      class="ml-0.5 inline align-middle"
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17.5747 15.8619L15.8138 17.6228C15.7656 17.6732 15.7236 17.7026 15.6627 17.7362C13.1757 19.0753 8.40326 16.5734 6.21009 14.2626C6.18698 14.2374 6.16809 14.2185 6.14502 14.1954C3.83427 12.0021 1.33257 7.22927 2.67157 4.7421C2.70515 4.68124 2.73453 4.64134 2.78491 4.5931L4.54573 2.83006C4.67586 2.69992 4.82067 2.64116 5.00114 2.64116H5.01583C5.20471 2.64327 5.35163 2.71044 5.47965 2.84895L7.75047 5.30044C7.98973 5.55651 7.98131 5.95109 7.73368 6.19877L6.26666 7.66589C5.85321 8.08148 5.67271 8.62926 5.75877 9.20856C5.94134 10.428 6.55419 11.574 7.63293 12.7095C7.65603 12.7326 7.67489 12.7536 7.69799 12.7746C8.83342 13.8534 9.97723 14.4663 11.1966 14.6488C11.7779 14.7349 12.3257 14.5544 12.7412 14.1388L14.2062 12.6738C14.4538 12.4261 14.8484 12.4177 15.1065 12.6549L17.5578 14.9259C17.6963 15.0539 17.7614 15.2008 17.7656 15.3897C17.7698 15.5785 17.709 15.7276 17.5747 15.8619ZM18.3428 14.0779L15.8914 11.8069C15.1779 11.1457 14.0781 11.1667 13.3897 11.8552L11.9227 13.3223C11.7695 13.4755 11.5827 13.5364 11.3687 13.5049C10.3907 13.358 9.45254 12.8459 8.49341 11.9349C8.485 11.9287 8.47872 11.9202 8.47031 11.9118C7.56155 10.9547 7.04946 10.0144 6.90257 9.03849C6.87109 8.82439 6.93195 8.6376 7.08518 8.48229L8.5522 7.01728C9.2406 6.32883 9.2616 5.22902 8.59837 4.51331L6.32966 2.06182C5.98758 1.69451 5.54055 1.49304 5.03893 1.48462C4.53735 1.47624 4.08401 1.65672 3.72725 2.01354L1.96638 3.77452C1.83836 3.90256 1.73971 4.0348 1.65368 4.19431C1.24444 4.95199 1.08073 5.8776 1.16679 6.93962C1.24023 7.85682 1.49628 8.86008 1.92863 9.91793C2.70726 11.8279 3.9854 13.742 5.34746 15.035C5.35794 15.0434 5.36425 15.0497 5.37263 15.0581C6.66546 16.4202 8.57737 17.7006 10.4872 18.4792C11.5471 18.9095 12.5482 19.1656 13.4653 19.2411C13.6479 19.2558 13.8263 19.2621 14.0005 19.2621C14.8421 19.2621 15.5829 19.0921 16.2105 18.7542C16.37 18.6681 16.5043 18.5695 16.6323 18.4415L18.3931 16.6784C18.7478 16.3237 18.9304 15.8704 18.922 15.3687C18.9115 14.8649 18.7122 14.42 18.3428 14.0779Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <div class="contact-number hidden xl:block">
+                    <span
+                      class="block text-xs font-medium capitalize leading-none text-white group-data-[sticky=true]/h:text-dark"
+                      >Call Us:</span
+                    >
+                    <a
+                      href="tel:+123595966"
+                      class="font-semibold capitalize text-white transition-all duration-300 ease-out group-data-[sticky=true]/h:text-dark"
+                      >+123 5959 66</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Cart -->
+                <div
+                  class="header-cart group/cart relative ml-5 hidden pl-5 xl:block"
+                >
+                  <span
+                    class="header-border absolute top-[0px] left-0 hidden h-5 w-0.5 border-[1.5px] border-[#c5c5c5] xl:block"
+                  ></span>
+
+                  <button
+                    class="cart-button px-1.5 py-px text-white transition-all duration-300 ease-out group-data-[sticky=true]/h:text-dark"
+                  >
+                    <span>
+                      <svg
+                        class="inline align-middle"
+                        width="27"
+                        height="27"
+                        viewBox="0 0 27 27"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_53_138)">
+                          <path
+                            d="M11.1267 24.5359C11.1275 24.8398 11.0358 25.1371 10.8633 25.3903C10.6907 25.6434 10.4451 25.8411 10.1573 25.9583C9.86959 26.0755 9.55267 26.107 9.24659 26.0487C8.94051 25.9905 8.65899 25.8452 8.4376 25.6312C8.21621 25.4171 8.06486 25.144 8.00268 24.8462C7.9405 24.5484 7.97027 24.2393 8.08823 23.958C8.20619 23.6766 8.40706 23.4357 8.66546 23.2655C8.92385 23.0954 9.2282 23.0037 9.54005 23.002H9.55264C9.97012 23.002 10.3705 23.1636 10.6657 23.4512C10.9609 23.7389 11.1267 24.1291 11.1267 24.5359ZM19.6269 23.002H19.6143C19.1957 23.0036 18.7948 23.167 18.4997 23.4563C18.2046 23.7456 18.0393 24.1372 18.0402 24.5451C18.041 24.953 18.2079 25.344 18.5042 25.6321C18.8005 25.9203 19.202 26.0821 19.6206 26.0821C20.0392 26.0821 20.4407 25.9203 20.7369 25.6321C21.0332 25.344 21.2001 24.953 21.2009 24.5451C21.2018 24.1372 21.0365 23.7456 20.7414 23.4563C20.4463 23.167 20.0455 23.0036 19.6269 23.002ZM25.5266 9.18654L24.2497 16.7532C24.2179 17.3062 24.0702 17.8469 23.8155 18.342C23.5609 18.837 23.2047 19.276 22.7691 19.6316C22.3335 19.9872 21.8276 20.252 21.2828 20.4096C20.738 20.5671 20.1658 20.6141 19.6017 20.5476H9.19249C8.36008 20.5442 7.55653 20.2499 6.9278 19.7183C6.29907 19.1866 5.88685 18.4529 5.766 17.6503L3.86072 4.68407C3.80569 4.31993 3.61877 3.987 3.33376 3.7455C3.04874 3.50399 2.68445 3.36984 2.30677 3.36732H1.9718C1.72132 3.36732 1.48109 3.27035 1.30397 3.09775C1.12685 2.92515 1.02734 2.69105 1.02734 2.44695C1.02734 2.20285 1.12685 1.96875 1.30397 1.79614C1.48109 1.62354 1.72132 1.52657 1.9718 1.52657H2.30677C3.13918 1.53002 3.94272 1.82428 4.57146 2.35592C5.20019 2.88756 5.61241 3.62131 5.73326 4.42391L5.84911 5.20807H22.1202C22.6275 5.208 23.1286 5.31654 23.5881 5.52602C24.0476 5.73549 24.4542 6.04078 24.7793 6.4203C25.1044 6.79981 25.3399 7.24429 25.4692 7.7223C25.5986 8.2003 25.6173 8.70017 25.5266 9.18654ZM23.3279 7.60104C23.1805 7.42831 22.9959 7.2893 22.7872 7.19387C22.5785 7.09843 22.3508 7.04891 22.1202 7.04881H6.1186L7.62973 17.3901C7.68498 17.7557 7.87318 18.0898 8.16003 18.3315C8.44688 18.5732 8.81329 18.7064 9.19249 18.7069H19.6017C21.6165 18.7069 22.1026 17.9706 22.3884 16.4403L23.6654 8.87238C23.7089 8.64933 23.7012 8.41965 23.6429 8.19984C23.5845 7.98002 23.477 7.77552 23.3279 7.60104ZM17.7128 11.9575H12.6756C12.4252 11.9575 12.1849 12.0544 12.0078 12.227C11.8307 12.3997 11.7312 12.6338 11.7312 12.8778C11.7312 13.1219 11.8307 13.356 12.0078 13.5287C12.1849 13.7013 12.4252 13.7982 12.6756 13.7982H17.7128C17.9632 13.7982 18.2035 13.7013 18.3806 13.5287C18.5577 13.356 18.6572 13.1219 18.6572 12.8778C18.6572 12.6338 18.5577 12.3997 18.3806 12.227C18.2035 12.0544 17.9632 11.9575 17.7128 11.9575Z"
+                            fill="currentColor"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_53_138">
+                            <rect
+                              width="26"
+                              height="26"
+                              fill="white"
+                              transform="translate(0.304688 0.804352)"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+
+                    <span
+                      class="cart-count absolute -right-[6px] -top-[5px] h-[18px] w-[18px] rounded-[20px] bg-[#f74a1f] text-center leading-[17px] text-white text-xs"
+                      >0</span
+                    >
+                  </button>
+
+                  <!-- Mini Cart -->
+                  <div
+                    class="mini-cart invisible absolute right-0 top-full w-[350px] origin-top scale-y-0 bg-white p-[25px] text-start opacity-0 shadow-[0_8px_20px_rgba(61,110,168,0.3)] transition-all duration-[400ms] group-hover/cart:visible group-hover/cart:scale-y-100 group-hover/cart:opacity-100"
+                  >
+                    <div class="empty-cart mb-[30px]">
+                      <p class="mb-[15px] mt-0 py-4 text-body">
+                        Your Bag is Empty
+                      </p>
+                      <a
+                        href="/shop"
+                        class="shop-button cursor-pointer text-body"
+                      >
+                        Go To Shop
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Login -->
+                <div class="header-login ml-5 hidden sm:block">
+                  <a
+                    href="/login"
+                    class="login-button relative inline-flex h-10 w-[102px] items-center justify-center gap-1.5 rounded-full border border-white bg-transparent text-sm font-semibold text-white transition-all duration-300 ease-out group-data-[sticky=true]/h:border-primary group-data-[sticky=true]/h:bg-primary"
+                  >
+                    <div class="span-grp flex items-end justify-center">
+                      <span
+                        class="relative -top-[5px] mr-1 inline-flex items-center"
+                      >
+                        <svg
+                          class="block h-[18px] w-[18px] relative top-[3px]"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.7 17.2C1.5 17.2 1.3 17.1 1.2 17C1.1 16.8 1 16.7 1 16.5C1 15.1 1.4 13.7 2.1 12.4C2.8 11.2 3.9 10.1 5.1 9.4C4.6 8.8 4.2 8 4 7.2C3.9 6.4 3.9 5.5 4.1 4.8C4.3 4 4.8 3.2 5.3 2.6C5.9 2 6.6 1.5 7.3 1.3C7.9 1.1 8.5 1 9.1 1C9.3 1 9.6 1 9.8 1C10.6 1.1 11.4 1.4 12.1 1.9C12.8 2.4 13.3 3 13.7 3.7C14.1 4.4 14.3 5.2 14.3 6.1C14.3 7.3 13.9 8.5 13.1 9.4C13.7 9.8 14.3 10.2 14.9 10.7C15.7 11.5 16.2 12.3 16.7 13.3C17.1 14.3 17.3 15.3 17.3 16.4C17.3 16.6 17.2 16.8 17.1 16.9C17 17 16.8 17.1 16.6 17.1C16.5 17.1 16.4 17.1 16.3 17C16.2 17 16.1 16.9 16.1 16.8C16 16.7 16 16.7 15.9 16.6C15.9 16.5 15.8 16.4 15.8 16.3C15.8 15.4 15.6 14.6 15.3 13.8C15 13 14.5 12.3 13.8 11.7C13.2 11.2 12.6 10.7 11.9 10.4C11.1 10.9 10.2 11.2 9.1 11.2C8.1 11.2 7.1 10.9 6.3 10.4C5.2 10.9 4.2 11.7 3.5 12.8C2.8 13.9 2.4 15.1 2.4 16.4C2.4 16.6 2.3 16.8 2.2 16.9C2.1 17.1 1.9 17.2 1.7 17.2ZM9.1 2.5C8.4 2.5 7.7 2.7 7.1 3.1C6.4 3.5 6 4.1 5.7 4.7C5.4 5.4 5.3 6.1 5.5 6.9C5.6 7.6 6 8.3 6.5 8.8C7 9.3 7.7 9.7 8.4 9.8C8.6 9.8 8.9 9.9 9.1 9.9C9.6 9.9 10.1 9.8 10.5 9.6C11.2 9.3 11.7 8.9 12.2 8.2C12.6 7.6 12.8 6.9 12.8 6.2C12.8 5.2 12.4 4.3 11.7 3.6C11 2.8 10.1 2.5 9.1 2.5Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                      Login
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Menu Button -->
+                <div class="header-menu-bar relative ml-5 pl-5 leading-none">
+                  <span
+                    class="header-border absolute left-0 top-0 hidden h-5 w-0.5 border-[1.5px] border-[#c5c5c5] xl:block"
+                  ></span>
+
+                  <!-- Desktop Menu -->
+                  <button
+                    class="desktop-menu-button hidden h-5 cursor-pointer px-1.5 py-px leading-[0] xl:block [&>span]:block [&>span]:h-0.5 [&>span]:w-[34px] [&>span]:rounded-md [&>span]:bg-white [&>span:not(:last-child)]:mb-1.5 group-data-[sticky=true]/h:[&>span]:bg-dark"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+
+                  <!-- Mobile Menu -->
+                  <button
+                    class="mobile-menu-button block h-5 cursor-pointer px-1.5 py-px leading-[0] xl:hidden [&>span]:block [&>span]:h-0.5 [&>span]:w-[34px] [&>span]:rounded-md [&>span]:bg-white [&>span:not(:last-child)]:mb-1.5 group-data-[sticky=true]/h:[&>span]:bg-dark"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main>
+      <div
+        class="background_header relative h-[371px] min-[375px]:h-[335px] overflow-hidden bg-[url('tourex_image/background_image.jpg')] bg-cover bg-center bg-no-repeat pb-[100px] pt-[150px] md:h-[395px] md:pb-[128px] md:pt-[182px]"
+      >
+        <!-- Top black shadow -->
+        <div
+          class="top_shadow_header absolute left-0 top-0 z-[1] h-[188px] w-full bg-gradient-to-b from-black to-transparent"
+        ></div>
+
+        <!-- Bottom dark shadow -->
+        <div
+          class="whole_shadow absolute left-0 top-0 z-[1] h-full w-full bg-gradient-to-b from-transparent to-black/40"
+        ></div>
+
+        <div
+          class="container_shop_page absolute z-[1] h-[121px] w-full px-3 text-white"
+        >
+          <div class="shop_row -mx-3 mt-0 flex flex-wrap">
+            <div class="shop_column w-full px-3">
+              <div class="text_content">
+                <h2
+                  class="title_shop_page mb-[5px] text-center text-[40px] font-bold leading-[44px] text-[rgb(233_233_233)] md:text-white"
+                >
+                  Shop Page
+                </h2>
+
+                <div
+                  class="shop_page_list text-center text-base font-medium leading-[26px] text-white"
+                >
+                  <ul
+                    class="flex flex-wrap justify-center [&>li]:mr-2 [&>li]:py-[5px] [&>li]:font-medium [&>li]:capitalize [&>li]:text-white"
+                  >
+                    <li>
+                      <a href="/" style="position: relative; left: 2px">Home</a>
+                    </li>
+
+                    <li style="position: relative; left: 1px">
+                      <i class="fa-sharp fa-solid fa-angle-right"></i>
+                    </li>
+
+                    <li>Pages</li>
+
+                    <li style="position: relative; left: -1px">
+                      <i class="fa-sharp fa-solid fa-angle-right"></i>
+                    </li>
+
+                    <li
+                      class="shop-call-archieve min-[375px]:relative min-[375px]:-left-0.5"
+                    >
+                      Shop Archive Page
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-main-container pb-20 pt-[90px] xl:pt-[130px]">
+        <div
+          class="main-container-shop-card mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1250px]"
+        >
+          <!-- Search Container------------------- -->
+          <div class="row-container-main -mx-3 flex flex-wrap">
+            <aside
+              class="shop-container-list top-sticky mb-[50px] w-full px-3 lg:sticky lg:top-[120px] lg:w-1/3 lg:self-start xl:w-1/4"
+            >
+              <div
+                class="search-container relative mb-10 rounded-xl border border-[#e9e9e9] bg-white px-[30px] pb-[30px] pt-[25px] text-dark shadow-[0_0_15px_0_#efefef] xxl:w-[311.5px]"
+              >
+                <h5
+                  class="mb-[15px] text-[18px] font-semibold leading-[1.1] text-dark md:mb-[15.5px]"
+                >
+                  Search
+                </h5>
+
+                <div class="input-search">
+                  <input
+                    type="text"
+                    placeholder="Type here . . ."
+                    name="search-container"
+                    class="input-tag-search h-10 w-full rounded-md border border-transparent bg-[#f2f2f2] pl-3 pr-10 font-sans text-[13px] text-body outline-none placeholder:text-body"
+                  />
+
+                  <button
+                    class="absolute bottom-9 right-[46px] h-7 px-1.5 py-px"
+                  >
+                    <svg
+                      class="inline align-middle md:relative top-[-1px]"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_497_1336)">
+                        <path
+                          d="M17 17L13.5247 13.5247M15.681 8.3405C15.681 12.3945 12.3945 15.681 8.3405 15.681C4.28645 15.681 1 12.3945 1 8.3405C1 4.28645 4.28645 1 8.3405 1C12.3945 1 15.681 4.28645 15.681 8.3405Z"
+                          stroke="#560CE3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_497_1336">
+                          <rect width="18" height="18" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="categories mb-10 rounded-xl border border-[#e9e9e9] bg-white px-[30px] pb-[30px] pt-[25px] shadow-[0_0_15px_0_#efefef] xxl:w-[311.5px]"
+              >
+                <h5
+                  class="mb-[5px] text-[18px] font-semibold leading-[1.1] text-dark"
+                >
+                  Categories
+                </h5>
+                <div class="product-list-category">
+                  <ul>
+                    <li
+                      class="flex cursor-pointer justify-between border-b border-[#e6e6e6] pb-2.5 pt-[11px] text-[15px] text-body transition-colors duration-300 last:border-b-0 hover:text-primary"
+                    >
+                      <span>All Category</span><span>(13)</span>
+                    </li>
+                    <li
+                      class="flex cursor-pointer justify-between border-b border-[#e6e6e6] pb-2.5 pt-[11px] text-[15px] text-body transition-colors duration-300 last:border-b-0 hover:text-primary"
+                    >
+                      <span>Activity</span><span>(3)</span>
+                    </li>
+                    <li
+                      class="flex cursor-pointer justify-between border-b border-[#e6e6e6] pb-2.5 pt-[11px] text-[15px] text-body transition-colors duration-300 last:border-b-0 hover:text-primary"
+                    >
+                      <span>Destinations</span><span>(3)</span>
+                    </li>
+                    <li
+                      class="flex cursor-pointer justify-between border-b border-[#e6e6e6] pb-2.5 pt-[11px] text-[15px] text-body transition-colors duration-300 last:border-b-0 hover:text-primary"
+                    >
+                      <span>Beach Tour</span><span>(1)</span>
+                    </li>
+                    <li
+                      class="flex cursor-pointer justify-between border-b border-[#e6e6e6] pb-2.5 pt-[11px] text-[15px] text-body transition-colors duration-300 last:border-b-0 hover:text-primary"
+                    >
+                      <span>City Tour</span><span>(1)</span>
+                    </li>
+                    <li
+                      class="flex cursor-pointer justify-between border-b border-[#e6e6e6] pb-2.5 pt-[11px] text-[15px] text-body transition-colors duration-300 last:border-b-0 hover:text-primary"
+                    >
+                      <span>Flight</span><span>(3)</span>
+                    </li>
+                    <li
+                      class="flex cursor-pointer justify-between border-b border-[#e6e6e6] pb-2.5 pt-[11px] text-[15px] text-body transition-colors duration-300 last:border-b-0 hover:text-primary"
+                    >
+                      <span>Lifestyle</span><span>(2)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Best Selling Products -->
+              <div
+                class="best-sell-products rounded-xl border border-[#e9e9e9] bg-white px-[30px] pb-[30px] pt-[25px] text-dark shadow-[0_0_15px_0_#efefef] xxl:w-[311.5px]"
+              >
+                <h5
+                  class="mb-[25px] text-[18px] font-semibold leading-[1.1] text-dark md:mb-[24px]"
+                >
+                  Best Selling Products
+                </h5>
+
+                <!-- Mobile -->
+                <div
+                  class="sell-product-item mb-5 flex h-20 w-full items-center"
+                >
+                  <div
+                    class="image-sell-product mr-[15px] h-20 w-[125px] lg:relative top-[1px] xxl:top-[0px]"
+                  >
+                    <img
+                      class="block h-20 w-full rounded-lg"
+                      src="tourex_image/mobile.webp"
+                      alt="mobile-phone"
+                    />
+                  </div>
+                  <div
+                    class="price-details relative flex flex-col gap-[3px] relative -top-[2px] w-full lg:top-0 min-[1024px]:-top-[1px]"
+                  >
+                    <h4
+                      class="relative top-px mb-[5px] text-[15px] font-medium leading-[1.4] text-[#000000] lg:top-0"
+                    >
+                      Camera nstax
+                    </h4>
+                    <div
+                      class="product-ratings1 flex [&>span]:mr-0.5 [&>span]:text-sm [&>span]:text-[#ff9901] [&>span:last-child]:text-body relative min-[1024px]:top-[0px] xxl:-top-[1px]"
+                    >
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-regular fa-star"></i></span>
+                    </div>
+                    <span
+                      class="price block text-base font-semibold text-primary relative top-[1px] min-[1024px]:top-[1px] xxl:top-[0px]"
+                      >$20.00</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Watch -->
+                <div
+                  class="sell-product-item mb-5 flex h-20 w-full items-center"
+                >
+                  <div
+                    class="image-sell-product mr-[15px] h-20 w-[125px] lg:relative top-[1px] xxl:top-[0px]"
+                  >
+                    <img
+                      class="block h-20 w-full rounded-lg"
+                      src="tourex_image/watch.webp"
+                      alt="Watch"
+                    />
+                  </div>
+                  <div
+                    class="price-details relative flex flex-col gap-[3px] relative -top-[2px] w-full lg:top-0 min-[1024px]:-top-[1px]"
+                  >
+                    <h4
+                      class="relative top-px mb-[5px] text-[15px] font-medium leading-[1.4] text-[#000000] lg:top-0"
+                    >
+                      Hats Men Caps
+                    </h4>
+                    <div
+                      class="product-ratings1 flex [&>span]:mr-0.5 [&>span]:text-sm [&>span]:text-[#ff9901] [&>span:last-child]:text-body relative min-[1024px]:top-[0px] xxl:-top-[1px]"
+                    >
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-regular fa-star"></i></span>
+                    </div>
+                    <span
+                      class="price block text-base font-semibold text-primary relative top-[1px] min-[1024px]:top-[1px] xxl:top-[0px]"
+                      >$50.00</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Camera -->
+                <div
+                  class="sell-product-item mb-5 flex h-20 w-full items-center"
+                >
+                  <div
+                    class="image-sell-product mr-[15px] h-20 w-[125px] lg:relative top-[1px] xxl:top-[0px]"
+                  >
+                    <img
+                      class="block h-20 w-full rounded-lg"
+                      src="tourex_image/camera.webp"
+                      alt="Camera"
+                    />
+                  </div>
+                  <div
+                    class="price-details relative flex flex-col gap-[3px] relative -top-[2px] w-full lg:top-0 min-[1024px]:-top-[1px]"
+                  >
+                    <h4
+                      class="relative top-px mb-[5px] text-[15px] font-medium leading-[1.4] text-[#000000] lg:top-0"
+                    >
+                      Canon EOS R100
+                    </h4>
+                    <div
+                      class="product-ratings1 flex [&>span]:mr-0.5 [&>span]:text-sm [&>span]:text-[#ff9901] [&>span:last-child]:text-body relative min-[1024px]:top-[0px] xxl:-top-[1px]"
+                    >
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-regular fa-star"></i></span>
+                    </div>
+                    <span
+                      class="price block text-base font-semibold text-primary relative top-[1px] min-[1024px]:top-[1px] xxl:top-[0px]"
+                      >$80.00</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="sell-product-item mb-5 flex h-20 w-full items-center"
+                >
+                  <div
+                    class="image-sell-product mr-[15px] h-20 w-[125px] lg:relative top-[1px] xxl:top-[0px]"
+                  >
+                    <img
+                      class="block h-20 w-full rounded-lg"
+                      src="tourex_image/cap.webp"
+                      alt="mobile-phone"
+                    />
+                  </div>
+                  <div
+                    class="price-details relative flex flex-col gap-[3px] relative -top-[2px] w-full lg:top-0 min-[1024px]:-top-[1px]"
+                  >
+                    <h4
+                      class="relative top-px mb-[5px] text-[15px] font-medium leading-[1.4] text-[#000000] lg:top-0"
+                    >
+                      Halo Smartwatch
+                    </h4>
+                    <div
+                      class="product-ratings1 flex [&>span]:mr-0.5 [&>span]:text-sm [&>span]:text-[#ff9901] [&>span:last-child]:text-body relative min-[1024px]:top-[0px] xxl:-top-[1px]"
+                    >
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-solid fa-star"></i></span>
+                      <span><i class="fa-sharp fa-regular fa-star"></i></span>
+                    </div>
+                    <span
+                      class="price block text-base font-semibold text-primary relative top-[1px] min-[1024px]:top-[1px] xxl:top-[0px]"
+                      >$99.00</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- ================= Card Section ===================== -->
+            <section
+              class="product-card-section mb-[50px] w-full px-3 lg:w-2/3 xl:w-3/4 xxl:pl-[57px]"
+            >
+              <div
+                class="container-result mb-[25px] flex flex-col items-end gap-[18px] rounded-lg border border-[#e9e9e9] pb-[21px] pl-5 pr-[30px] pt-[14px] md:flex-row md:items-center md:justify-between md:gap-0 md:py-[19px]"
+              >
+                <span
+                  id="resultText"
+                  class="relative -top-px text-[15px] font-medium capitalize leading-[26px] text-body"
+                  >Loading...</span
+                >
+                <div class="result-tools flex items-center gap-[11px]">
+                  <div
+                    class="sort-dropdown group/s relative mr-3.5"
+                    id="sortDropdown"
+                    data-open="false"
+                  >
+                    <button
+                      type="button"
+                      class="sort-current flex cursor-pointer items-center gap-2.5 whitespace-nowrap p-0 font-sans text-[15px] font-medium capitalize leading-[26px] text-body"
+                      id="sortCurrent"
+                      aria-haspopup="listbox"
+                      aria-expanded="false"
+                    >
+                      <span
+                        id="sortLabel"
+                        class="relative left-[0px] md:-top-0.5 md:left-[1px]"
+                        >Default sorting</span
+                      >
+                      <svg
+                        class="sort-arrow relative -left-px -bottom-px h-[7px] w-[11px] shrink-0 text-[#060607] transition-transform duration-300 group-data-[open=true]/s:rotate-180 md:bottom-[0px] md:left-[0px] lg:top-[-1px] lg:text-[#0e0e0f] min-[1440px]:-top-[1px] min-[1440px]:left-[0px]"
+                        width="12"
+                        height="8"
+                        viewBox="0 0 12 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1.5l5 5 5-5"
+                          stroke="currentColor"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <ul
+                      class="sort-list invisible absolute right-0 top-full z-20 mt-2 min-w-[210px] translate-y-2.5 rounded-lg bg-white py-2.5 opacity-0 shadow-[0_10px_40px_rgba(2,6,21,0.12)] transition-all duration-[250ms] group-data-[open=true]/s:visible group-data-[open=true]/s:translate-y-0 group-data-[open=true]/s:opacity-100 [&>li]:cursor-pointer [&>li]:px-[22px] [&>li]:py-1.5 [&>li]:text-sm [&>li]:font-normal [&>li]:leading-6 [&>li]:text-body [&>li]:transition-all [&>li]:duration-200 [&>li:hover]:text-primary [&>li[data-selected=true]]:font-semibold [&>li[data-selected=true]]:text-primary"
+                      role="listbox"
+                    >
+                      <li
+                        role="option"
+                        data-value="default"
+                        data-selected="true"
+                      >
+                        Default sorting
+                      </li>
+                      <li
+                        role="option"
+                        data-value="offers"
+                        data-selected="false"
+                      >
+                        Sort by Best Offers
+                      </li>
+                      <li
+                        role="option"
+                        data-value="price"
+                        data-selected="false"
+                      >
+                        Sort by price
+                      </li>
+                      <li
+                        role="option"
+                        data-value="rating"
+                        data-selected="false"
+                      >
+                        Sort by rating
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="view-toggle relative left-px hidden gap-[15px] sm:flex xl:left-[0px]"
+                  >
+                    <button
+                      class="view-btn cursor-pointer text-xl leading-none hover:relative hover:-left-px hover:top-0 hover:text-primary data-[active=true]:relative data-[active=true]:-left-px data-[active=true]:top-0 data-[active=true]:text-primary md:hover:-top-px md:data-[active=true]:-top-px lg:hover:top-0 lg:data-[active=true]:-top-[1px]"
+                      data-view="grid"
+                      data-active="true"
+                      aria-label="Grid view"
+                    >
+                      <svg
+                        class="inline align-middle"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 1H1V8H8V1Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M19 1H12V8H19V1Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M19 12H12V19H19V12Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M8 12H1V19H8V12Z"
+                          stroke="currentColor"
+                          stroke-width="1.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button
+                      class="view-btn1 relative -left-px -top-px cursor-pointer text-xl leading-none hover:text-primary data-[active=true]:text-primary lg:-top-[2px]"
+                      data-view="list"
+                      data-active="false"
+                      aria-label="List view"
+                    >
+                      <svg
+                        class="inline align-middle"
+                        width="20"
+                        height="14"
+                        viewBox="0 0 20 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 1H19M6 7H19M6 13H19M1 1H1.01M1 7H1.01M1 13H1.01"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="product-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
+                id="productGrid"
+              ></div>
+              <ul
+                class="pagination mx-auto mb-[30px] flex w-fit max-w-full flex-wrap pt-[60px]"
+                id="pagination"
+              ></ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= MOBILE OFFCANVAS ================= -->
+    <aside
+      class="offcanvas mobile-offcanvas invisible fixed bottom-0 right-0 top-0 z-[1000] w-[min(340px,calc(100%-20px))] translate-x-[105%] overflow-y-auto overscroll-contain bg-white transition-[transform,visibility] duration-[400ms] ease-in-out data-[open=true]:visible data-[open=true]:translate-x-0 xl:hidden [&[data-open=true]_.mobile-close]:rotate-[360deg]"
+      id="mobileMenu"
+      data-open="false"
+      aria-hidden="true"
+    >
+      <div
+        class="mobile-head flex items-center justify-between px-[25px] pt-[30px]"
+      >
+        <a href="/"
+          ><img
+            class="inline align-middle h-[35px]"
+            src="tourex_image/logo_dark.webp"
+            alt="Tourex"
+            width="150"
+            height="35"
+        /></a>
+        <button
+          class="mobile-close absolute right-[15px] top-7 z-10 w-[35px] cursor-pointer p-2 text-center text-[23px] leading-[30px] text-primary transition-all duration-500"
+          data-close
+          aria-label="Close menu"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form
+        class="mobile-search px-[25px] pb-[25px] pt-[30px]"
+        onsubmit="return false;"
+      >
+        <input
+          type="text"
+          placeholder="Search here..."
+          class="h-[45px] w-[255px] border-0 bg-[#f2f2f2] px-5 font-sans text-[15px] text-dark outline-none placeholder:text-dark"
+        />
+      </form>
+
+      <ul class="mobile-nav border-t border-[#e6e6e6]">
+        <li
+          class="mobile-has-sub group/mi border-b border-[#e6e6e6]"
+          data-open="false"
+        >
+          <div
+            class="mobile-row flex cursor-pointer items-center justify-between py-[7px] pl-[25px] pr-5"
+          >
+            <a
+              href="#"
+              class="flex-1 text-[15px] font-semibold uppercase leading-8 tracking-[1px] text-dark hover:text-primary"
+              >Home</a
+            >
+            <button
+              class="sub-toggle h-8 w-8 flex-[0_0_32px] cursor-pointer bg-[#f2f2f2] group-data-[open=true]/mi:bg-primary relative -top-[1px]"
+              aria-label="Toggle submenu"
+            >
+              <span
+                class="relative block h-[2px] w-3 rounded-[10px] bg-primary transition-all duration-500 group-data-[open=true]/mi:bg-white before:absolute before:left-1/2 before:top-1/2 before:h-3 before:w-[2px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[10px] before:bg-primary before:content-[''] group-data-[open=true]/mi:before:hidden left-[10px]"
+              ></span>
+            </button>
+          </div>
+          <ul
+            class="mobile-sub m-0 max-h-0 overflow-hidden p-0 transition-[max-height] duration-[400ms] ease-in-out [&>li]:border-t [&>li]:border-[#e6e6e6] [&_a]:block [&_a]:py-2.5 [&_a]:pl-[45px] [&_a]:pr-[25px] [&_a]:text-[15px] [&_a]:font-semibold [&_a]:uppercase [&_a]:leading-[26px] [&_a]:tracking-[1px] [&_a]:text-dark [&_a:hover]:text-primary"
+          >
+            <li><a href="/">Home One (Travel)</a></li>
+            <li><a href="/home-two">Home Two (Travel)</a></li>
+            <li><a href="/home-three">Home Three (Travel)</a></li>
+            <li><a href="/home-four">Home Four (Hotel)</a></li>
+            <li><a href="/home-five">Home Five (Hotel)</a></li>
+            <li><a href="/home-six">Home Six (Hotel)</a></li>
+            <li><a href="/home-seven">Home Seven (Restaurant)</a></li>
+          </ul>
+        </li>
+
+        <li
+          class="mobile-has-sub group/mi border-b border-[#e6e6e6]"
+          data-open="false"
+        >
+          <div
+            class="mobile-row flex cursor-pointer items-center justify-between py-[7px] pl-[25px] pr-5"
+          >
+            <a
+              href="#"
+              class="flex-1 text-[15px] font-semibold uppercase leading-8 tracking-[1px] text-dark hover:text-primary"
+              >Features</a
+            >
+            <button
+              class="sub-toggle h-8 w-8 flex-[0_0_32px] cursor-pointer bg-[#f2f2f2] group-data-[open=true]/mi:bg-primary relative -top-[1px]"
+              aria-label="Toggle submenu"
+            >
+              <span
+                class="relative block h-[2px] w-3 rounded-[10px] bg-primary transition-all duration-500 group-data-[open=true]/mi:bg-white before:absolute before:left-1/2 before:top-1/2 before:h-3 before:w-[2px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[10px] before:bg-primary before:content-[''] group-data-[open=true]/mi:before:hidden left-[10px]"
+              ></span>
+            </button>
+          </div>
+          <ul
+            class="mobile-sub m-0 max-h-0 overflow-hidden p-0 transition-[max-height] duration-[400ms] ease-in-out [&>li]:border-t [&>li]:border-[#e6e6e6] [&_a]:block [&_a]:py-2.5 [&_a]:pl-[45px] [&_a]:pr-[25px] [&_a]:text-[15px] [&_a]:font-semibold [&_a]:uppercase [&_a]:leading-[26px] [&_a]:tracking-[1px] [&_a]:text-dark [&_a:hover]:text-primary"
+          >
+            <li><a href="/hotel-grid">Hotel Grid</a></li>
+            <li><a href="/tour-grid-1">Tour Grid One</a></li>
+            <li><a href="/tour-grid-2">Tour Grid Two</a></li>
+            <li><a href="/map-listing">Hotel Listing</a></li>
+            <li><a href="/tour-details">Tour Details One</a></li>
+            <li><a href="/tour-details-2">Tour Details Two</a></li>
+          </ul>
+        </li>
+
+        <li
+          class="mobile-has-sub group/mi border-b border-[#e6e6e6]"
+          data-open="false"
+        >
+          <div
+            class="mobile-row flex cursor-pointer items-center justify-between py-[7px] pl-[25px] pr-5"
+          >
+            <a
+              href="#"
+              class="flex-1 text-[15px] font-semibold uppercase leading-8 tracking-[1px] text-dark hover:text-primary"
+              >Pages</a
+            >
+            <button
+              class="sub-toggle h-8 w-8 flex-[0_0_32px] cursor-pointer bg-[#f2f2f2] group-data-[open=true]/mi:bg-primary relative -top-[1px]"
+              aria-label="Toggle submenu"
+            >
+              <span
+                class="relative block h-[2px] w-3 rounded-[10px] bg-primary transition-all duration-500 group-data-[open=true]/mi:bg-white before:absolute before:left-1/2 before:top-1/2 before:h-3 before:w-[2px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[10px] before:bg-primary before:content-[''] group-data-[open=true]/mi:before:hidden left-[10px]"
+              ></span>
+            </button>
+          </div>
+          <ul
+            class="mobile-sub m-0 max-h-0 overflow-hidden p-0 transition-[max-height] duration-[400ms] ease-in-out [&>li]:border-t [&>li]:border-[#e6e6e6] [&_a]:block [&_a]:py-2.5 [&_a]:pl-[45px] [&_a]:pr-[25px] [&_a]:text-[15px] [&_a]:font-semibold [&_a]:uppercase [&_a]:leading-[26px] [&_a]:tracking-[1px] [&_a]:text-dark [&_a:hover]:text-primary"
+          >
+            <li><a href="/about">About</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/team-details">Team Details</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/shop-details">Shop Details</a></li>
+            <li><a href="/cart">Cart</a></li>
+            <li><a href="/wishlist">Wishlist</a></li>
+            <li><a href="/checkout">Checkout</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/faq">Faq</a></li>
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/no-found">Error</a></li>
+          </ul>
+        </li>
+
+        <li
+          class="mobile-has-sub group/mi border-b border-[#e6e6e6]"
+          data-open="false"
+        >
+          <div
+            class="mobile-row flex cursor-pointer items-center justify-between py-[7px] pl-[25px] pr-5"
+          >
+            <a
+              href="#"
+              class="flex-1 text-[15px] font-semibold uppercase leading-8 tracking-[1px] text-dark hover:text-primary"
+              >Blogs</a
+            >
+            <button
+              class="sub-toggle h-8 w-8 flex-[0_0_32px] cursor-pointer bg-[#f2f2f2] group-data-[open=true]/mi:bg-primary relative -top-[1px]"
+              aria-label="Toggle submenu"
+            >
+              <span
+                class="relative block h-[2px] w-3 rounded-[10px] bg-primary transition-all duration-500 group-data-[open=true]/mi:bg-white before:absolute before:left-1/2 before:top-1/2 before:h-3 before:w-[2px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[10px] before:bg-primary before:content-[''] group-data-[open=true]/mi:before:hidden left-[10px]"
+              ></span>
+            </button>
+          </div>
+          <ul
+            class="mobile-sub m-0 max-h-0 overflow-hidden p-0 transition-[max-height] duration-[400ms] ease-in-out [&>li]:border-t [&>li]:border-[#e6e6e6] [&_a]:block [&_a]:py-2.5 [&_a]:pl-[45px] [&_a]:pr-[25px] [&_a]:text-[15px] [&_a]:font-semibold [&_a]:uppercase [&_a]:leading-[26px] [&_a]:tracking-[1px] [&_a]:text-dark [&_a:hover]:text-primary"
+          >
+            <li><a href="/blog-grid">Blog Grid</a></li>
+            <li><a href="/blog-standard">Blog Standard</a></li>
+            <li><a href="/blog-details">Blog Details</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-single border-b border-[#e6e6e6]">
+          <a
+            href="/contact"
+            class="block px-[25px] py-[7px] text-[15px] font-semibold uppercase leading-8 tracking-[1px] text-dark hover:text-primary"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <div
+        class="mobile-social flex gap-3 pl-[26px] pr-[25px] pb-10 pt-[30px] [&>a]:flex [&>a]:h-10 [&>a]:w-10 [&>a]:items-center [&>a]:justify-center [&>a]:border [&>a]:border-[#efefef] [&>a]:text-primary [&>a]:text-[16px] [&>a:hover]:border-primary [&>a:hover]:bg-primary [&>a:hover]:text-white"
+      >
+        <a href="#">
+          <i class="fab fa-facebook-f text-[16px]"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ================= Desktop OFFCANVAS================= -->
+    <aside
+      class="offcanvas info-offcanvas invisible fixed bottom-0 right-0 top-0 z-[1000] hidden w-[min(340px,calc(100%-20px))] translate-x-[105%] overflow-y-auto overscroll-contain bg-white px-[30px] py-10 transition-[transform,visibility] duration-[400ms] ease-in-out data-[open=true]:visible data-[open=true]:translate-x-0 xl:block"
+      id="infoPanel"
+      data-open="false"
+      aria-hidden="true"
+    >
+      <button
+        class="info-close absolute right-[30px] top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-primary text-primary text-[20px]"
+        data-close
+        aria-label="Close panel"
+      >
+        <i
+          class="fa-sharp fa-regular fa-xmark font-bold relative top-[1px]"
+        ></i>
+      </button>
+
+      <a class="info-logo mt-3.5 inline-block" href="/">
+        <img
+          class="inline align-middle h-[34px]"
+          src="tourex_image/logo_dark.webp"
+          alt="Tourex"
+          width="126"
+          height="34"
+        />
+      </a>
+
+      <div class="info-line mt-[29px] mb-[24px] h-[1.5px] bg-[rgb(160_134_233)]"></div>
+
+      <div
+        class="info-block mb-[29px] [&_h4]:mb-2 [&_h4]:text-[18px] [&_h4]:font-bold [&_h4]:leading-[1.2] [&_h4]:text-dark [&_p]:text-base [&_p]:leading-[26px] [&_p]:text-body"
+      >
+        <h4>Office Address</h4>
+        <p>123/A, Miranda City Likaoli<br />Prikano, Dope</p>
+      </div>
+
+      <div
+        class="info-block mb-[29px] [&_h4]:mb-2 [&_h4]:text-[18px] [&_h4]:font-bold [&_h4]:leading-[1.2] [&_h4]:text-dark [&_p]:text-base [&_p]:leading-[26px] [&_p]:text-body"
+      >
+        <h4>Phone Number</h4>
+        <p class="relative -top-[1px]">+0989 7876 9865 9</p>
+        <p class="relative top-[1px]">+(090) 8765 86543 85</p>
+      </div>
+
+      <div
+        class="info-block mb-[32px] [&_h4]:mb-[8px] [&_h4]:text-[18px] [&_h4]:font-bold [&_h4]:leading-[1.2] [&_h4]:text-dark [&_p]:text-base [&_p]:leading-[26px] [&_p]:text-body"
+      >
+        <h4 class="relative top-[1px]">Email Address</h4>
+        <p class="relative top-[0px]">info@example.com</p>
+        <p class="relative top-[2px]">example.mail@hum.com</p>
+      </div>
+
+      <div
+        class="info-social flex gap-[5px] [&>a]:flex [&>a]:h-10 [&>a]:w-10 [&>a]:items-center [&>a]:justify-center [&>a]:rounded-full [&>a]:border [&>a]:border-primary [&>a]:text-[16px] [&>a]:text-primary [&>a:hover]:bg-primary [&>a:hover]:text-white"
+      >
+        <a href="#" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Google">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </aside>
+
+    <footer
+      class="site-footer relative bg-dark bg-[url('tourex_image/footer-backgrd-image.jpg')] bg-cover bg-center bg-no-repeat pt-[90px] text-base leading-[26px] text-[#acadb5] xl:pt-[130px]"
+    >
+      <div
+        class="footer-container relative z-[1] mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1250px]"
+      >
+        <div class="footer-top pb-10">
+          <div class="footer-row -mx-3 flex flex-wrap">
+            <div
+              class="footer-col w-full px-3 sm:w-1/2 lg:w-[270px] xl:w-[31.36%]"
+            >
+              <div class="footer-widget mb-10 lg:pr-[30px] xl:pr-[79px]">
+                <div class="mb-[20px]">
+                  <img
+                    class="block h-[35px] w-[126px]"
+                    src="tourex_image/logo_header.webp"
+                    alt="Tourex"
+                    width="126"
+                    height="35"
+                  />
+                </div>
+
+                <p
+                  class="footer-text text-[15px] capitalize leading-6 xxl:leading-[24px] mb-[20px]"
+                >
+                  Pharetra maecenas felis vestibulum convallis mollis nullam
+                  congue Sit.D rivers of Finland Quebec.
+                </p>
+
+                <form
+                  class="footer-form mb-[30px] flex w-full"
+                  onsubmit="return false;"
+                >
+                  <div class="relative">
+                    <input
+                      type="email"
+                      placeholder="Enter your mail"
+                      class="h-[45px] w-full rounded-[5px] border border-[rgba(0,0,0,0)] bg-white px-[16px] py-[10px] pr-[50px] font-sans text-[16px] text-grey-1 outline-none placeholder:text-body shadow-none lg:pt-[9px] xxl:pt-[10px] xxl:w-[288.5px]"
+                    />
+
+                    <button
+                      type="submit"
+                      aria-label="Subscribe"
+                      class="absolute right-0 top-0 flex h-[45px] w-[55px] cursor-pointer items-center justify-center rounded-r-[4px] bg-primary"
+                    >
+                      <svg
+                        class="inline align-middle relative top-[1px] lg:top-[0px] xxl:top-[1px]"
+                        width="22"
+                        height="17"
+                        viewBox="0 0 22 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.52514 8.47486H20.4749M20.4749 8.47486L13.5 1.5M20.4749 8.47486L13.5 15.4497"
+                          stroke="white"
+                          stroke-width="1.77778"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+
+                <div
+                  class="flex [&>a]:inline-block [&>a]:h-[40px] [&>a]:w-[40px] [&>a]:flex-[0_0_auto] [&>a]:mr-[10px] [&>a]:rounded-[31px] [&>a]:bg-body [&>a]:text-center [&>a]:leading-[43px] [&>a]:text-white"
+                >
+                  <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+
+                  <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+
+                  <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+
+                  <a href="#" aria-label="Pinterest">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                  </a>
+
+                  <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="footer-col w-full px-3 sm:w-1/2 lg:w-[177px] xl:w-[16%] xxl:px-[12.5px]"
+            >
+              <div class="footer-widget footer-links footer-quick mb-10">
+                <h3
+                  class="footer-title mb-[25px] text-xl font-bold leading-[1.1] text-white"
+                >
+                  Quick Links
+                </h3>
+                <ul class="[&>li]:py-1.5 [&>li]:leading-[26px]">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Tour Guide</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="footer-col w-full px-3 sm:w-1/2 lg:w-[303px] xl:w-[27.6%]"
+            >
+              <div class="footer-widget footer-info mb-10 lg:pr-[43px] xl:pr-0">
+                <h3
+                  class="footer-title mb-[25px] text-xl font-bold leading-[1.1] text-white"
+                >
+                  Information
+                </h3>
+                <ul
+                  class="[&>li]:py-[10px] [&>li]:leading-[26px] [&>li]:capitalize"
+                >
+                  <li class="font-medium text-[#acadb5]">
+                    <a
+                      href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"
+                      class="flex items-start text-base font-normal"
+                    >
+                      <span
+                        class="footer-icon mr-[15px] flex flex-none items-start"
+                      >
+                        <svg
+                          class="inline align-middle relative top-[2px] lg:top-[1px] xxl:top-[2px]"
+                          width="20"
+                          height="24"
+                          viewBox="0 0 20 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.0013 10.0608C19.0013 16.8486 10.3346 22.6668 10.3346 22.6668C10.3346 22.6668 1.66797 16.8486 1.66797 10.0608C1.66797 7.74615 2.58106 5.52634 4.20638 3.88965C5.83169 2.25297 8.03609 1.3335 10.3346 1.3335C12.6332 1.3335 14.8376 2.25297 16.4629 3.88965C18.0882 5.52634 19.0013 7.74615 19.0013 10.0608Z"
+                            stroke="white"
+                            stroke-width="1.73333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M10.3346 12.9699C11.9301 12.9699 13.2235 11.6674 13.2235 10.0608C13.2235 8.45412 11.9301 7.15168 10.3346 7.15168C8.73915 7.15168 7.44575 8.45412 7.44575 10.0608C7.44575 11.6674 8.73915 12.9699 10.3346 12.9699Z"
+                            stroke="white"
+                            stroke-width="1.73333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span
+                        class="text-[16px] text-[#acadb5] font-medium leading-[26px]"
+                        >58 Street Commercial Road<br />Fratton, Australia</span
+                      >
+                    </a>
+                  </li>
+
+                  <li class="font-medium text-[#acadb5]">
+                    <a
+                      href="tel:+1238889999"
+                      class="flex items-start text-base font-normal"
+                    >
+                      <span
+                        class="footer-icon mr-[15px] flex flex-none items-start"
+                        ><i
+                          class="fa-sharp fa-solid fa-phone text-white relative top-[4px]"
+                        ></i
+                      ></span>
+                      <span
+                        class="text-[16px] text-[#acadb5] font-medium leading-[26px]"
+                      >
+                        +123 888 9999
+                      </span>
+                    </a>
+                  </li>
+
+                  <li
+                    class="footer-hours-item flex items-start font-medium text-[#acadb5]"
+                  >
+                    <span
+                      class="footer-icon mr-[15px] flex flex-none items-start"
+                    >
+                      <svg
+                        class="inline align-middle relative top-[2px] lg:top-[1px] xxl:top-[2px]"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.9987 5.60006V12.0001L16.2654 14.1334M22.6654 12.0002C22.6654 17.8912 17.8897 22.6668 11.9987 22.6668C6.10766 22.6668 1.33203 17.8912 1.33203 12.0002C1.33203 6.10912 6.10766 1.3335 11.9987 1.3335C17.8897 1.3335 22.6654 6.10912 22.6654 12.0002Z"
+                          stroke="white"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                    <p
+                      class="text-[15px] text-[#acadb5] font-medium leading-[24px]"
+                    >
+                      Mon – Sat: 8 am – 5 pm,<br />
+                      Sunday:
+                      <span class="closed font-medium text-white">CLOSED</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="footer-col w-full px-3 sm:w-1/2 lg:w-[210px] xl:w-[25.04%] xxl:px-[12.5px]"
+            >
+              <div class="footer-widget footer-links footer-utility mb-10">
+                <h3
+                  class="footer-title mb-[25px] text-xl font-bold leading-[1.1] text-white"
+                >
+                  Utility Pages
+                </h3>
+                <ul class="[&>li]:py-1.5 [&>li]:leading-[26px]">
+                  <li><a href="#">Style Guide</a></li>
+                  <li><a href="#">Password Protected</a></li>
+                  <li><a href="#">404 Error</a></li>
+                  <li><a href="#">Changelog</a></li>
+                  <li><a href="#">License</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="footer-copyright relative z-[1] border-t border-white/10 py-[43px] px-[10px] text-center"
+      >
+        <span class="text-sm leading-[26px] text-[#7b7e88] font-medium"
+          >Copyright <a href="#">©Tourex</a> | All Right Reserved</span
+        >
+      </div>
+    </footer>
+
+    <button
+      id="backToTop"
+      data-show="false"
+      class="invisible fixed bottom-[15px] right-[15px] z-[99] flex h-[35px] w-[35px] translate-y-5 cursor-pointer items-center justify-center rounded-full bg-primary text-sm text-white opacity-0 shadow-[0_12px_12px_-8px_rgba(2,6,21,0.35)] transition-all duration-300 data-[show=true]:visible data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:bottom-[30px] sm:right-[30px] sm:h-[50px] sm:w-[50px] sm:text-base xxl:right-[50px] lg:right-[25px]"
+    >
+      <i class="fa-sharp fa-regular fa-arrow-up font-bold"></i>
+    </button>
+
+    <div
+      class="offcanvas-overlay invisible fixed inset-0 z-[999] bg-[rgb(5_5_5_/_76%)] opacity-0 transition-all duration-[400ms] ease-in-out data-[show=true]:visible data-[show=true]:opacity-100 xl:z-[1]"
+      id="offcanvasOverlay"
+      data-show="false"
+    ></div>
+  </body>
+</html>

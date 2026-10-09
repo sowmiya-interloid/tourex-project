@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "title": "Noise Fit Halo Smartwatch",
+    "category": "Activity",
+    "price": 980.00,
+    "rating": 5,
+    "image": "tourex_image/smartwatch.webp",
+    "review":"8 Reviews"
+  },
+  {
+    "id": 2,
+    "title": "Canon EOS R100 Mirrorless",
+    "category": "Destinations",
+    "price": 120.00,
+    "rating": 5,
+    "image": "tourex_image/smartcamera.webp",
+    "review":"3 Reviews"
+  },
+  {
+    "id": 3,
+    "title": "Camera | instax | FUJIFILM",
+    "category": "Beach Tour",
+    "price": 280.00,
+    "rating": 5,
+    "image": "tourex_image/mobilephone.webp",
+    "review":"13 Reviews"
+  },
+  {
+    "id": 4,
+    "title": "EDIFIER WH950NB Wireless Noise",
+    "category": "City Tour",
+    "price": 100.00,
+    "rating": 2,
+    "image": "tourex_image/headphone.webp",
+    "review":"12 Reviews"
+  },
+  {
+    "id": 5,
+    "title": "Woodland Backpack TB 142F12",
+    "category": "Flight",
+    "price": 230.00,
+    "rating": 5,
+    "image": "tourex_image/bag.webp",
+    "review":"8 Reviews"
+  },
+  {
+    "id": 6,
+    "title": "SoundPro 20 15W TWS",
+    "category": "Lifestyle",
+    "price":199.00,
+    "rating": 1,
+    "image": "tourex_image/soundpro.webp",
+    "review":"4 Reviews"
+  },
+  {
+    "id": 7,
+    "title": "Taran 6 Persons Tant Tent",
+    "category": "Activity",
+    "price": 299.00,
+    "rating": 3,
+    "image": "tourex_image/taran.webp",
+    "review":"5 Reviews"
+  },
+  {
+    "id": 8,
+    "title": "Kiyo UVC Water Bottle",
+    "category": "Destinations",
+    "price": 240,
+    "rating": 5,
+    "image": "tourex_image/waterbottle.webp",
+    "review":"15 Reviews"
+  },
+  {
+    "id": 9,
+    "title": "Hats Men Baseball Caps",
+    "category": "Flight",
+    "price": 320.00,
+    "rating": 3,
+    "image": "tourex_image/smartcap.webp",
+    "review":"10 Reviews"
+  },
+  {
+    "id": 10,
+    "title": "SoundPro 20 15W TWS",
+    "category": "Lifestyle",
+    "price": 199.00,
+    "rating": 1,
+    "image": "tourex_image/soundpro.webp",
+    "review":"4 Reviews"
+  },
+  {
+    "id": 11,
+    "title": "Taran 6 Persons Tant Tent",
+    "category": "Activity",
+    "price": 299.00,
+    "rating": 3,
+    "image": "tourex_image/taran.webp",
+    "review":"5 Reviews"
+  },
+  {
+    "id": 12,
+    "title": "Kiyo UVC Water Bottle",
+    "category": "Destinations",
+    "price": 240.00,
+    "rating": 5,
+    "image": "tourex_image/waterbottle.webp",
+    "review":"15 Reviews"
+  },
+  {
+    "id": 13,
+    "title": "Hats Men Baseball Caps",
+    "category": "Flight",
+    "price": 320.00,
+    "rating": 3,
+    "image": "tourex_image/smartcap.webp",
+    "review":"10 Reviews"
+  }
+]
